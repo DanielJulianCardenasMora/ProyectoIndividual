@@ -5,7 +5,8 @@ module.exports = (sequelize) => {
     "Game",
     {
       ID: {
-        type: DataTypes.STRING,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
         allowNull: false,
         primaryKey: true,
       },

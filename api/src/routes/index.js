@@ -24,9 +24,9 @@ router.get("/", (req, res) => {
   res.status(200).send('Entraste al Login')
 });
 router.get("/videogames/:id", getGameById);
-router.get("/videogames");
-router.post("/videogames");
-router.get("/genres");
+router.get("/videogames", getGame);
+router.post("/videogames", postGame);
+router.get("/genres", getGenre);
 
 
 
