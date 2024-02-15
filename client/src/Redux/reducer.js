@@ -8,8 +8,8 @@ import { ADD_FAV, REMOVE_FAV, FILTER, ORDER  } from "./action-types";
 
 
 const initialState = {
-  myFavorites: [],
-  allCharacters: [],
+  gamesApi: [],
+  gamesCreated: [],
   errors: ''  
 }
 

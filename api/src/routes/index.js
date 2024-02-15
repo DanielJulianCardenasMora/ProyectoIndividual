@@ -17,7 +17,6 @@ const getGenre = require("../controllers/getGenre");
 
 
 
-
 router.get("/videogames/name", getGameQuery);
 
 router.get("/", (req, res) => {
@@ -27,6 +26,7 @@ router.get("/videogames/:id", getGameById);
 router.get("/videogames", getGame);
 router.post("/videogames", postGame);
 router.get("/genres", getGenre);
+
 
 
 
