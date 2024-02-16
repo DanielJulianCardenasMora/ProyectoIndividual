@@ -1,0 +1,28 @@
+.bg{
+  height: 100vh;
+  width: 100%;
+  vertical-align: top;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.leftImages{
+  height: 100vh;
+  
+}
+
+.dragon{
+  height: 40%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: -25px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.warrior{
+  height: 40%;
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
