@@ -1,3 +1,7 @@
+import style from './Filter_Genre.module.css'
+
+
+
 
 
 

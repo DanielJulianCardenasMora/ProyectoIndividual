@@ -23,7 +23,7 @@ server.use((req, res, next) => {
   next();
 });
 server.use(express.json())
-server.use('/vgworld', router)
+server.use('/mundoVideoJuegos', router)
 
 
 module.exports = server;

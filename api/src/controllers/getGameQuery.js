@@ -18,23 +18,20 @@ const getGameQuery = async (req, res) => {
       const {data} = await axios
         .get(`${URL}games${API_KEY}&search=${name}`);
       const juegosCoincidentes = data.results.slice(0, 15)
-      const resultados = juegosCoincidentes.map(({ id, name, background_image, background_image_additional, platforms, description, released, rating }) => ({
-      // sin el ultimo (
-        //   const platformNames = platforms.map(platform => platform.platform.name).join(', ');
-
-      //   return {
-      //     id,
-      //     name,
-      //     background_image,
-      //     background_image_additional,
-      //     platforms: platformNames, // Concatenated platform names
-      //     description,
-      //     released,
-      //     rating
-      //   };
-      // });
-        id, name, background_image, background_image_additional, platforms, description, released, rating
-      }))
+      const resultados = juegosCoincidentes.map(({ id, name, background_image, background_image_additional, platforms, description, released, rating }) => {
+        const platformNames = platforms.map(platform => platform.platform.name).join(', ');
+        
+        return {
+          id,
+          name,
+          background_image,
+          background_image_additional,
+          platforms: platformNames, 
+          description,
+          released,
+          rating
+        };
+      });
 
       return resultados.length
       ? res.status(200).json(resultados)

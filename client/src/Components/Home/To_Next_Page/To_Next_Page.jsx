@@ -1,4 +1,4 @@
-
+import style from './To_Next_Page.module.css'
 
 
 

@@ -1,4 +1,4 @@
-
+import style from './Filter_Rating.module.css'
 
 
 

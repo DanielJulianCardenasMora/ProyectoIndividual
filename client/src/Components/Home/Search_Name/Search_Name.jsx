@@ -1,4 +1,4 @@
-
+import style from './Search_Name.module.css'
 
 
 

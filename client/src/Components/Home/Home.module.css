@@ -1,0 +1,17 @@
+.container{
+  height: 100vh;
+  width: 100%;
+  position:absolute;
+}
+
+.background{
+  height: 100vh;
+  width: 100%;
+  position:absolute;
+  transform: translate(-50%);
+}
+
+.components{
+  position: absolute;
+}
+
