@@ -13,9 +13,9 @@ const { URL, API_KEY } = process.env;
 const getGame = async (req, res) => {
   try {
     let games = [];
-    // for (let i = 1; i < 2; i++) {
+    for (let i = 1; i < 6; i++) {
       const { data } = await axios
-      .get(`${URL}games${API_KEY}`);
+      .get(`${URL}games${API_KEY}&page=${i}`);
       const resultados = data.results.map(({ id, name, background_image, genres}) => {
         
 
@@ -30,7 +30,7 @@ const getGame = async (req, res) => {
       });
 
       games.push(...resultados)
-    // }
+    }
  
     return res.status(200).json(games);
 

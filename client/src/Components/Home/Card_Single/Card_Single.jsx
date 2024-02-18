@@ -16,7 +16,7 @@ const Card_Single = ({ id, name, background_image, genres }) => {
       <h2 className={style.title}>{name}</h2>
       <h2 className={style.title}>{genres}</h2>
 
-      <img src={background_image}/>
+      <img className={style.imagen} src={background_image}/>
     </>
   )
 }
