@@ -1,14 +1,16 @@
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, ERROR } from './action-types';
+import {ADD_ALL_GAMES} from './action-types2'
+
+
+
 
 
 
 const initialState = {
   gamesApi: [],
   gamesCreated: [],
-  gamesByGenre: [],
   errors: ''  
 }
-
+const games= [1,2,3]
 
 
 const reducer = (state = initialState, action) => {
@@ -16,13 +18,13 @@ const reducer = (state = initialState, action) => {
     case ADD_ALL_GAMES:
       return {
         ...state,
-        gamesApi: action.payload,
+        gamesApi: games,
       };
   
     // case FILTER_GENRE:
     //   return {
     //     ...state,
-    //     gamesByGenre: [],
+    //     myFavorites: action.payload,
     //     errors: ''
     //   };
   

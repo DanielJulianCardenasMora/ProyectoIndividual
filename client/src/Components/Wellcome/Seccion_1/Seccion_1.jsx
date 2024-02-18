@@ -6,7 +6,7 @@ const Seccion_1 = () => {
     <Nav_Bar />
     <div className={style.world}>
       <h1>Mundo</h1>  
-      <h1>de los</h1>  
+      <h1>de lossssssss</h1>  
       <h1>Video Juegos</h1>  
     </div>
     

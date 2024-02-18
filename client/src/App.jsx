@@ -1,35 +1,44 @@
 import './App.css'
-import { useState, useEffect } from 'react'
-import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios';
+import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from "react-redux";
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { About_View, Detail_View, Form_New_View, Home_View, Landing_View, Wellcome_View } from './Views';
-// import onSearch from './Functions/useGames';
-import React from 'react'
+import { getApiGames } from './Redux/actions';
 
 
 
 
+// const [games, setGames] = useState([]);
+// const URL = 'http://localhost:3001/mundoVideoJuegos/videogames'
+
+// const onSearch = async () => {
+//   try {
+//     const { data } = await axios.get(`${URL}`);
+//     if (data.length) {
+//       setGames(data);
+//     } 
+//   } catch (error) {
+//     alert(error.message);
+//   }
+// };
+
+// useEffect(() => {
+//   onSearch();
+// }, []); 
 
 
 
 
 function App() {
-  const [games, setGames] = useState([]);
-  const URL = 'http://localhost:3001/mundoVideoJuegos/videogames'
-
-  const onSearch = async () => {
-    try {
-      const { data } = await axios.get(`${URL}`);
-      if (data.length) {
-        setGames(data);
-      } 
-    } catch (error) {
-      alert(error.message);
-    }
-  };
-
+  const games = useSelector((state) => state.gamesApi)
+  const dispatch = useDispatch()
+  const getGames = () => {
+    dispatch(getApiGames())
+  }
+  
   useEffect(() => {
-    onSearch();
+    getGames();
   }, []); 
 
 

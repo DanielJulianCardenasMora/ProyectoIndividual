@@ -34,7 +34,8 @@ const getGame = async (req, res) => {
  
     return res.status(200).json(games);
 
-  } catch (error) {
+  }
+  catch (error) {
     res.status(500).json({ message: error.message });
   }
 };

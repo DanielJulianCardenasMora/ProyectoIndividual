@@ -1,62 +1,81 @@
-import { ADD_FAV, FILTER, ORDER, REMOVE_FAV } from './action-types'
+import dotenv from 'react-dotenv';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, ERROR } from './action-types'
 import axios from 'axios'
-const ENDPOINT = 'http://localhost:3001/rickandmorty/fav';
+// // const { URL, API_KEY } = process.env;
+// const URL = process.env
+const URL = "https://api.rawg.io/api/"
+const API_KEY = "?key=60168d0ccdc54d229cb076e54698a8fa"
 
 
 
 
 
-
-
-export const addFav = (character) => {
+export const getApiGames = () => {
   return async (dispatch) => {
     try {
-      const { data } = await axios.post(ENDPOINT, character);
+      const games = [];
+      for (let i = 1; i < 6; i++) {
+        const { data } = await axios
+        .get(`${URL}games${API_KEY}&page=${i}`);
+        const resultados = data.results.map(({ id, name, background_image, genres}) => {
+          const genresGame = genres.map(genre => genre.name).join(', ');
+          
+          return {
+            id,
+            name,
+            background_image,
+            genres: genresGame, 
+          };
+        });
+  
+        games.push(...resultados)
+      }
+
       return dispatch({
-        type: "ADD_FAV",
-        payload: data,
+        type: ADD_ALL_GAMES,
+        payload: games,
       });
-    } catch (error) {
+    }
+    catch (error) {
       alert(error.message);
-      return dispatch({
-        type: "ERROR",
-        payload: error.message,
-      });
+      // return dispatch({
+      //   type: ERROR,
+      //   payload: error.message,
+      // });
     }
   };
 };
 
 
-export const removeFav = (id) => {
-  return async (dispatch) => {
-    try {
-      const { data } = await axios.delete(`${ENDPOINT}/${id}`)
-      return dispatch({
-        type: "REMOVE_FAV",
-        payload: data
-      });
-    } catch (error) {
-      alert(error.message);
-      return dispatch({
-        type: "ERROR",
-        payload: error.message
-      });
-    }
-  };
-};
+// export const FILTER_GENRE = () => {
+//   return async (dispatch) => {
+//     try {
+//       return dispatch({
+//         type: "REMOVE_FAV",
+//         payload: data
+//       });
+//     } catch (error) {
+//       alert(error.message);
+//       return dispatch({
+//         type: "ERROR",
+//         payload: error.message
+//       });
+//     }
+//   };
+// };
 
 
-export const filterCards = (gender) => {
-    return {
-        type: FILTER,
-        payload: gender
-    }
-}
+// export const filterCards = (gender) => {
+//     return {
+//         type: FILTER,
+//         payload: gender
+//     }
+// }
 
 
-export const orderCards = (orden) => {
-    return {
-        type:ORDER,
-        payload: orden
-    }
-}
+// export const orderCards = (orden) => {
+//     return {
+//         type:ORDER,
+//         payload: orden
+//     }
+// }
