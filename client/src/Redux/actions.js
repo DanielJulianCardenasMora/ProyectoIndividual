@@ -1,11 +1,11 @@
-import dotenv from 'react-dotenv';
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, ERROR } from './action-types'
+// import dotenv from 'react-dotenv';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, ERROR } from './action-types'
 import axios from 'axios'
 // // const { URL, API_KEY } = process.env;
 // const URL = process.env
 const URL = "https://api.rawg.io/api/"
 const API_KEY = "?key=60168d0ccdc54d229cb076e54698a8fa"
-
+const URL_SERVER = 'http://localhost:3001/mundoVideoJuegos/'
 
 
 
@@ -47,32 +47,39 @@ export const getApiGames = () => {
 };
 
 
-// export const FILTER_GENRE = () => {
-//   return async (dispatch) => {
-//     try {
-//       return dispatch({
-//         type: "REMOVE_FAV",
-//         payload: data
-//       });
-//     } catch (error) {
-//       alert(error.message);
-//       return dispatch({
-//         type: "ERROR",
-//         payload: error.message
-//       });
-//     }
-//   };
-// };
+export const getDataBaseGenres = () => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios
+        .get(`${URL_SERVER}allGenres`);
+
+      return dispatch({
+        type: GET_GENRE,
+        payload: data,
+      });
+    }
+    catch (error) {
+      alert(error.message);
+    }
+  }  
+};
 
 
-// export const filterCards = (gender) => {
-//     return {
-//         type: FILTER,
-//         payload: gender
-//     }
-// }
+export const filtroDeGenero = (genero) => {
+  return {
+      type: FILTER_GENRE,
+      payload: genero
+    }
+}
 
 
+
+
+// const nombresDeGeneros = data.map((genero) => genero.Nombre);
+
+// const filtroDeGenero = nombresDeGeneros.filter((nombre) => {
+//   return nombre.toLowerCase().includes(genero.toLowerCase());
+// });
 // export const orderCards = (orden) => {
 //     return {
 //         type:ORDER,

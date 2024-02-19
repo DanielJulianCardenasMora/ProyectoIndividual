@@ -1,12 +1,12 @@
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, ERROR } from './action-types';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, ERROR } from './action-types';
 
 
 
 const initialState = {
   gamesApi: [],
   gamesCreated: [],
-  gamesByGenre: [],
-  errors: ''  
+  gamesGenreDataBase: [],
+  gamesGenreFiltered: [],
 }
 
 
@@ -19,13 +19,35 @@ const reducer = (state = initialState, action) => {
         gamesApi: action.payload,
       };
   
-    // case FILTER_GENRE:
-    //   return {
-    //     ...state,
-    //     gamesByGenre: [],
-    //     errors: ''
-    //   };
+    case GET_GENRE:
+      return {
+        ...state,
+        gamesGenreDataBase: action.payload,
+      };
   
+    case FILTER_GENRE:
+      const opcion = action.payload
+      const games = state.gamesApi
+      const filtrarJuegosPorGenero = (games, opcion) => {
+        const juegosPorGenero = games.filter((juego) => {
+          const generosJuego = juego.genres.split(", ");
+          return generosJuego.some((genero) => genero.toLowerCase().includes(opcion.toLowerCase()));
+        });
+        return juegosPorGenero;
+      };
+
+      const juegosPorGenero = filtrarJuegosPorGenero(games, opcion)
+      
+    
+      
+      return {
+        ...state,
+        gamesGenreFiltered: juegosPorGenero,
+        gamesApi: juegosPorGenero
+   
+      }
+        
+    
     // case FILTER_DB:
     //   const filtered = state.allCharacters.filter(character => character.gender === action.payload)
     //   return {
@@ -43,12 +65,7 @@ const reducer = (state = initialState, action) => {
     //       myFavorites: [...ordered]
     //   }
   
-    // case ERROR:
-    //   return {
-    //       ...state,
-    //       errors: action.payload
-    //   }
-    
+
     default:
         return state
   }

@@ -13,6 +13,8 @@ const getGameQuery = require("../controllers/getGameQuery");
 const getGame = require("../controllers/getGame");
 const postGame = require("../controllers/postGame");
 const getGenre = require("../controllers/getGenre");
+const getAllGenres = require("../controllers/getAllGenres")
+
 // const login = require("../controllers/login");
 
 
@@ -26,6 +28,7 @@ router.get("/videogames/:id", getGameById);
 router.get("/videogames", getGame);
 router.post("/videogames", postGame);
 router.get("/genres", getGenre);
+router.get("/allGenres", getAllGenres);
 
 
 
