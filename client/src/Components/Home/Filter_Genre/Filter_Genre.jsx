@@ -10,9 +10,9 @@ import { filtroDeGenero } from '../../../Redux/actions';
 
 
 const Filter_Genre = () => {
-  // const games = useSelector((state) => state.gamesApi)
+
   const genres = useSelector((state) => state.gamesGenreDataBase)
-  // const [options, setOptions] = useState([]);
+
 
   const dispatch = useDispatch()
   const handleFilter = (event) => {

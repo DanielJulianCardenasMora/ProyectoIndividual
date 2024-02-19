@@ -2,6 +2,7 @@ import Card_Single from '../Card_Single/Card_Single'
 import style from './Cards_Display.module.css'
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
+import { orderLetter } from '../../../Redux/actions'
 
 
 
@@ -11,18 +12,29 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [orderGames, setOrderGames] = useState([]);
   const [showComponent, setShowComponent] = useState(true);
-
+  const [isDescending, setIsDescending] = useState(false);
+  const [isAsending, setIsAsending] = useState(false);
+  const dispatch = useDispatch()
   const itemsPerPage = 15; 
   const startIndex = (currentPage - 1) * itemsPerPage;
+
+
   
+  const handleOrderDesc = () => {
+    setIsDescending(true)
+    setIsAsending(false);
+
+  };
+  
+  const handleOrder = () => {
+    setIsAsending(true)
+    setIsDescending(false);
+  };
+
+
   useEffect(() => {
     const ordenados = ordenarPorNombre(gamesApiToShow);
     setOrderGames(ordenados);
-    return () => {
-      // Limpia el estado relacionado con los juegos
-      setOrderGames([]);
-    };
-    
   }, [games]); 
   
   function ordenarPorNombre(games) {
@@ -37,7 +49,18 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
   
   const JuegosVisibles = getJuegosVisibles();
 
+  useEffect(() => {
+    if (isDescending) {
+      setOrderGames(orderGames.slice().reverse());
+    }
 
+  }, [isDescending, isAsending]);
+  useEffect(() => {
+    if (isAsending) {
+      setOrderGames(orderGames.slice().reverse());
+    }
+    
+  }, [isAsending, isDescending]);
   return (
     <div className={style.container}>
       {showComponent && (
@@ -62,14 +85,19 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
         </button>
         <button
           onClick={() => setCurrentPage(currentPage + 1)}
-          disabled={currentPage === Math.ceil(orderGames.length / itemsPerPage)}
-        >
+          disabled={currentPage === Math.ceil(orderGames.length / itemsPerPage)}>
           Siguiente
         </button>
+        <button onClick={handleOrder}>
+          Ascendente
+        </button>
+        <button onClick={handleOrderDesc}>
+          Descendente
+        </button>
+      </div>
         <button onClick={() => setShowComponent(!showComponent)}>
           Mostrar/Ocultar contenido
         </button>
-      </div>
     </div>
   );
 };
@@ -79,35 +107,3 @@ export default Cards_Display
 
 
 
-
-
-// const [gamesApiToShow, setGamesApiToShow] = useState([]);
-// const [currentPage, setCurrentPage] = useState(1);
-// // const [orderGames, setOrderGames] = useState([]);
-// const [showComponent, setShowComponent] = useState(true);
-
-// const itemsPerPage = 15; 
-// const startIndex = (currentPage - 1) * itemsPerPage;
-
-// const crearCopiaJuegos = (games) => {
-//   const copia = games.slice();
-//   return copia;
-// };
-
-
-
-
-// useEffect(() => {
-//   const juegosCopia = crearCopiaJuegos(games)
-//   setGamesApiToShow(juegosCopia)
-//   gamesApiToShow.sort((a, b) => a.name.localeCompare(b.name));
-  
-// }, [games]); 
-
-
-
-// const getJuegosVisibles = () => {
-//   return gamesApiToShow.slice(startIndex, startIndex + itemsPerPage);
-// };
-
-// const JuegosVisibles = getJuegosVisibles();

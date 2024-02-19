@@ -67,30 +67,14 @@ export const getDataBaseGenres = () => {
 
 export const filtroDeGenero = (genero) => {
   return {
-      type: FILTER_GENRE,
-      payload: genero
-    }
+    type: FILTER_GENRE,
+    payload: genero
+  }
 }
 
-
-// export const getGamesCopy = (games) => {
-//   const juegosCopia = games.slice();
-//   return {
-//     type: "GUARDAR_JUEGOS",
-//     payload: juegosCopia,
-//   };
-// }
-
-
-
-// const nombresDeGeneros = data.map((genero) => genero.Nombre);
-
-// const filtroDeGenero = nombresDeGeneros.filter((nombre) => {
-//   return nombre.toLowerCase().includes(genero.toLowerCase());
-// });
-// export const orderCards = (orden) => {
-//     return {
-//         type:ORDER,
-//         payload: orden
-//     }
-// }
+export const orderLetter = (orden) => {
+  return {
+    type:ORDER,
+    payload: orden
+  } 
+}
