@@ -73,6 +73,14 @@ export const filtroDeGenero = (genero) => {
 }
 
 
+// export const getGamesCopy = (games) => {
+//   const juegosCopia = games.slice();
+//   return {
+//     type: "GUARDAR_JUEGOS",
+//     payload: juegosCopia,
+//   };
+// }
+
 
 
 // const nombresDeGeneros = data.map((genero) => genero.Nombre);

@@ -13,6 +13,7 @@ import { getApiGames, getDataBaseGenres } from './Redux/actions';
 function App() {
   const games = useSelector((state) => state.gamesApi)
   const genres = useSelector((state) => state.gamesGenreDataBase)
+  const gamesApiToShow = useSelector((state) => state.gamesApiToShow);
   const dispatch = useDispatch()
   const getGames = () => {
     dispatch(getApiGames())
@@ -20,6 +21,8 @@ function App() {
   const getGenre = () => {
     dispatch(getDataBaseGenres())
   } 
+
+
 
   useEffect(() => {
     getGames()
@@ -36,7 +39,7 @@ function App() {
         <Routes> 
           <Route path='/' element={<Landing_View />} />
           <Route path='/wellcome' element={<Wellcome_View/>}/>
-          <Route path='/home' element={<Home_View games={games} />} />
+          <Route path='/home' element={<Home_View games={games} gamesApiToShow={ gamesApiToShow } />} />
           <Route path='/detail' element={ <Detail_View/> } />
           <Route path='/about' element={<About_View/>} />
           <Route path='/createGame' element={<Form_New_View/>}/>

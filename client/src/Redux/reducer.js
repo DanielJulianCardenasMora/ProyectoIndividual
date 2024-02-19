@@ -7,6 +7,7 @@ const initialState = {
   gamesCreated: [],
   gamesGenreDataBase: [],
   gamesGenreFiltered: [],
+  gamesApiToShow:[]
 }
 
 
@@ -17,6 +18,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         gamesApi: action.payload,
+        gamesApiToShow: [...action.payload]
       };
   
     case GET_GENRE:
@@ -41,12 +43,16 @@ const reducer = (state = initialState, action) => {
     
       
       return {
-        ...state,
-        gamesGenreFiltered: juegosPorGenero,
-        gamesApi: juegosPorGenero
-   
+        gamesApi: [...state.gamesApi],
+        gamesGenreDataBase: [...state.gamesGenreDataBase],
+
+        gamesApiToShow: juegosPorGenero
       }
-        
+    // case "GUARDAR_JUEGOS":
+    //   return {
+    //     ...state,
+    //     gamesApiShow: action.payload,
+    //   }; 
     
     // case FILTER_DB:
     //   const filtered = state.allCharacters.filter(character => character.gender === action.payload)

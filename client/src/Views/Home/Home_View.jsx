@@ -16,13 +16,13 @@ import Home from "../../Components/Home/Home"
 
 
 
-const Home_View = ({games}) => {
+const Home_View = ({games, gamesApiToShow}) => {
   return (
     <>
 
       <div>
         <Home />
-        <Cards_Display games={games}/>
+        <Cards_Display games={games} gamesApiToShow={gamesApiToShow} />
         <Filter_Db/>
         <Filter_Genre/>
         <Filter_Order/>
