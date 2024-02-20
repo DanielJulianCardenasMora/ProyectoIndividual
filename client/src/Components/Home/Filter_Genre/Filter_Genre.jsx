@@ -22,9 +22,6 @@ const Filter_Genre = () => {
  
   return (
     <div className={style.container}>
-      Filter_Genre
-
-      {/* <button onClick={() => handleFilter('Shooter')}>cambio de genero</button> */}
       <div>
         <select options={genres } className={style.options} defaultValue='All' onChange={handleFilter}>
       <option>All</option>

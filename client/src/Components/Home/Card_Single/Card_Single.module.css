@@ -1,9 +1,93 @@
-.container{
-  /* height: 100vh; */
+
+.buttonsContainer{
   width: 100%;
-  position:absolute;
+  height: auto;
+
+}
+
+.card{
+  height: 255px;
+  width: 326px;
+  position: relative;
+  margin-bottom: -85px;
+  align-items: center;
+}
+
+.blue{
+  background-color: rgb(93, 0, 255);
+  height: 244px;
+  width: 312px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 66px 66px 60px 60px;
+}
+
+.lightBlue{
+  background-color: rgb(53, 3, 27);
+  height: 197.77px;
+  width: 312px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 66px 66px 8px 8px;
+}
+
+.pink{
+  background-color: rgba(255, 0, 195, 0.715);
+  height: 57.36px;
+  width: 312px;
+  bottom: 0px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 0px 0px 66px 66px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+.firstShadow{
+  background-color: rgba(0, 0, 0, 70%);
+  height: 244px;
+  width: 316px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 2px);
+  border-radius: 66px 66px 60px 60px;
+}
+
+.secondShadow{
+  background-color: rgb(0, 0, 0, 20%);
+  height: 247px;
+  width: 320px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 2px);
+  border-radius: 66px 66px 60px 60px;
+}
+
+.tirdShadow{
+  background-color: rgb(0, 0, 0, 15%);
+  height: 254px;
+  width: 326px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 1px);
+  border-radius: 66px 66px 66px 66px;
+}
+
+.title{
+  line-height: 3px;
+  font-size: 15px;
+  position: relative;
 }
 
 .imagen{
-  width: 200px;
+  background-color: rgb(53, 3, 27);
+  height: 244px;
+  width: 312px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 66px 66px 58px 58px;
 }

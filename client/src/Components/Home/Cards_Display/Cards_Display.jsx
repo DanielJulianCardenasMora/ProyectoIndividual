@@ -62,24 +62,19 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
     
   }, [isAsending, isDescending]);
   return (
-    <div className={style.container}>
-      {showComponent && (
-        <>
-        {
-        JuegosVisibles.map((game) => (
-          
-            <Card_Single
+    <div>
+      <div className={style.cardsContainer}>
+        { JuegosVisibles.map((game) => (
+            <Card_Single 
               key={game.id}
               id={game.id}
               name={game.name}
               background_image={game.background_image}
               genres={game.genres}
-            />
-      ))}
-          </>
-        )}  
-
-      <div>
+          />))}
+      </div>
+      
+      <div className={style.buttonsContainer}>
         <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
           Anterior
         </button>
@@ -94,11 +89,11 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
         <button onClick={handleOrderDesc}>
           Descendente
         </button>
-      </div>
         <button onClick={() => setShowComponent(!showComponent)}>
           Mostrar/Ocultar contenido
         </button>
-    </div>
+      </div>
+</div>
   );
 };
 
