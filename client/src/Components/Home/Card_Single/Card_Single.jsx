@@ -24,7 +24,7 @@ const Card_Single = ({ id, name, background_image, genres, rating }) => {
             {/* <h2 className={style.title}>{id}</h2> */}
             <h2 className={style.title}>{name}</h2>
             <h2 className={style.title}>{genres}</h2>
-            <h2 className={style.title}>{rating}</h2>
+          <h2 className={style.title}>{rating}{'⭐'}</h2>
           </div>
         </div>
       </div>

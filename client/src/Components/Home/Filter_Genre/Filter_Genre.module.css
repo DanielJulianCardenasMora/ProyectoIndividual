@@ -1,7 +1,8 @@
 .container{
-  width: 100%;
-  position:absolute;
-  top:100px;
+  left: 70%;
+  position: absolute;
+  top:0px;
+  display: inline-block;
 }
 
 :root {
@@ -12,11 +13,8 @@
 }
 
 
-select {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-right: 30px;
-  margin-left: 30px;
+.select {
+
 
   appearance: none;
   border: 0;
@@ -42,7 +40,7 @@ select {
 
 }
 
-option {
+.select option {
   color: inherit;
   background-color: rgb(24, 196, 53);
 }

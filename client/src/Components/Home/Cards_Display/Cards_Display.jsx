@@ -11,7 +11,6 @@ import { orderLetter } from '../../../Redux/actions'
 const Cards_Display = ({ games, gamesApiToShow }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [orderGames, setOrderGames] = useState([]);
-  const [showComponent, setShowComponent] = useState(true);
   const [isDescending, setIsDescending] = useState(false);
   const [isAsending, setIsAsending] = useState(false);
   const dispatch = useDispatch()
@@ -89,9 +88,6 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
         </button>
         <button onClick={handleOrderDesc}>
           Descendente
-        </button>
-        <button onClick={() => setShowComponent(!showComponent)}>
-          Mostrar/Ocultar contenido
         </button>
       </div>
 </div>

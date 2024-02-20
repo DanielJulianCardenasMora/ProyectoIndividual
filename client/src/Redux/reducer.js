@@ -1,4 +1,4 @@
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS } from './action-types';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME } from './action-types';
 
 
 
@@ -44,7 +44,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         gamesApi: [...state.gamesApi],
-        gamesApiToShow: juegosPorGenero
+        gamesApiToShow: action.payload === 'All' ? state.gamesApi : juegosPorGenero
       }
 
     case ORDER:
@@ -67,13 +67,32 @@ const reducer = (state = initialState, action) => {
       }
   
     case RATINGS:
-      const juegosPorRating = state.gamesApi.filter(game => game.rating === action.payload);
+      const rating = Number(action.payload)
+      const gamesToFilterRating = state.gamesApi
+      const obtenerObjetos = (gamesToFilterRating, rating) => {
+        const juegosFiltrados = gamesToFilterRating.filter((game) => {
+          const numeroEntero = Math.round(game.rating);
+          return numeroEntero === rating
+        }) 
+        return juegosFiltrados
+      }
+
+      const miRating = obtenerObjetos(gamesToFilterRating, rating);
+      console.log(miRating)
 
       return {
         ...state,
           gamesApi: [...state.gamesApi],
-          gamesApiToShow: [...juegosPorRating]
+          gamesApiToShow: miRating
       }
+    
+    case GET_NAME:
+      return {
+        ...state,
+        gamesApi: [...state.gamesApi],
+        gamesApiToShow: [...action.payload]
+
+      };
 
     default:
         return state
