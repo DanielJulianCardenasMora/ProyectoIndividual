@@ -16,7 +16,7 @@ const getGame = async (req, res) => {
     for (let i = 1; i < 6; i++) {
       const { data } = await axios
       .get(`${URL}games${API_KEY}&page=${i}`);
-      const resultados = data.results.map(({ id, name, background_image, genres}) => {
+      const resultados = data.results.map(({ id, name, background_image, genres, rating}) => {
         
 
         const genresGame = genres.map(genre => genre.name).join(', ');
@@ -26,6 +26,7 @@ const getGame = async (req, res) => {
           name,
           background_image,
           genres: genresGame, 
+          rating
         };
       });
 

@@ -1,5 +1,5 @@
 // import dotenv from 'react-dotenv';
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, ERROR } from './action-types'
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS } from './action-types'
 import axios from 'axios'
 // // const { URL, API_KEY } = process.env;
 // const URL = process.env
@@ -17,7 +17,7 @@ export const getApiGames = () => {
       for (let i = 1; i < 6; i++) {
         const { data } = await axios
         .get(`${URL}games${API_KEY}&page=${i}`);
-        const resultados = data.results.map(({ id, name, background_image, genres}) => {
+        const resultados = data.results.map(({ id, name, background_image, genres, rating}) => {
           const genresGame = genres.map(genre => genre.name).join(', ');
           
           return {
@@ -25,6 +25,7 @@ export const getApiGames = () => {
             name,
             background_image,
             genres: genresGame, 
+            rating
           };
         });
   
@@ -76,5 +77,12 @@ export const orderLetter = (orden) => {
   return {
     type:ORDER,
     payload: orden
+  } 
+}
+
+export const getRatings = (numero) => {
+  return {
+    type:RATINGS,
+    payload: numero
   } 
 }

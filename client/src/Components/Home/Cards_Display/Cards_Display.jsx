@@ -71,6 +71,7 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
               name={game.name}
               background_image={game.background_image}
               genres={game.genres}
+              rating={game.rating}
           />))}
       </div>
       

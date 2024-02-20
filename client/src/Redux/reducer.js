@@ -1,4 +1,6 @@
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, ERROR } from './action-types';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS } from './action-types';
+
+
 
 
 
@@ -6,7 +8,7 @@ const initialState = {
   gamesApi: [],
   gamesCreated: [],
   gamesGenreDataBase: [],
-  gamesGenreFiltered: [],
+  gamesRatings: [1,2,3,4,5],
   gamesApiToShow:[]
 }
 
@@ -37,40 +39,41 @@ const reducer = (state = initialState, action) => {
         });
         return juegosPorGenero;
       };
-
       const juegosPorGenero = filtrarJuegosPorGenero(games, opcion)
       
-      
       return {
+        ...state,
         gamesApi: [...state.gamesApi],
-        gamesGenreDataBase: [...state.gamesGenreDataBase],
         gamesApiToShow: juegosPorGenero
       }
 
     case ORDER:
-
-      
- 
-      
-
-    const ordenados = state.gamesApiToShow.sort((a, b) => {
-      if (a.nombre && b.nombre) {
-        if (action.payload === "asc") {
-          return a.nombre.localeCompare(b.nombre);
+      const ordenados = state.gamesApiToShow.sort((a, b) => {
+        if (a.nombre && b.nombre) {
+          if (action.payload === "asc") {
+            return a.nombre.localeCompare(b.nombre);
+          } else {
+            return b.nombre.localeCompare(a.nombre);
+          }
         } else {
-          return b.nombre.localeCompare(a.nombre);
+          return 0;
         }
-      } else {
-        return 0;
       }
-    });
-    console.log(ordenados)
-
+    );
+      
       return {
         ...state,
           gamesApiToShow: [...ordenados]
       }
   
+    case RATINGS:
+      const juegosPorRating = state.gamesApi.filter(game => game.rating === action.payload);
+
+      return {
+        ...state,
+          gamesApi: [...state.gamesApi],
+          gamesApiToShow: [...juegosPorRating]
+      }
 
     default:
         return state

@@ -9,7 +9,7 @@ import React from 'react'
 
 
 
-const Card_Single = ({ id, name, background_image, genres }) => {
+const Card_Single = ({ id, name, background_image, genres, rating }) => {
   return (
 
       <div className={style.card}>
@@ -24,6 +24,7 @@ const Card_Single = ({ id, name, background_image, genres }) => {
             {/* <h2 className={style.title}>{id}</h2> */}
             <h2 className={style.title}>{name}</h2>
             <h2 className={style.title}>{genres}</h2>
+            <h2 className={style.title}>{rating}</h2>
           </div>
         </div>
       </div>

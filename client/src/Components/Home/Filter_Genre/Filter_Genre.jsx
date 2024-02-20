@@ -10,7 +10,6 @@ import { filtroDeGenero } from '../../../Redux/actions';
 
 
 const Filter_Genre = () => {
-
   const genres = useSelector((state) => state.gamesGenreDataBase)
 
 
@@ -19,11 +18,11 @@ const Filter_Genre = () => {
     dispatch(filtroDeGenero(event.target.value))
   }
 
- 
+  
   return (
     <div className={style.container}>
       <div>
-        <select options={genres } className={style.options} defaultValue='All' onChange={handleFilter}>
+        <select options={genres} className={style.options} defaultValue='All' onChange={handleFilter}>
       <option>All</option>
           {genres ? genres.map((option) => {
             return (
