@@ -40,7 +40,7 @@ function App() {
           <Route path='/' element={<Landing_View />} />
           <Route path='/wellcome' element={<Wellcome_View/>}/>
           <Route path='/home' element={<Home_View games={games} gamesApiToShow={ gamesApiToShow } />} />
-          <Route path='/detail' element={ <Detail_View/> } />
+          <Route path='/detail/:id' element={ <Detail_View/> } />
           <Route path='/about' element={<About_View/>} />
           <Route path='/createGame' element={<Form_New_View/>}/>
         </Routes>

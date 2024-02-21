@@ -68,8 +68,9 @@ export const getRatings = (numero) => {
 export const pedirNombre = (nombre) => {
   return async (dispatch) => {
     try {
+      const nombreMinuscula = nombre.toLowerCase();
       const { data } = await axios
-        .get(`${URL_SERVER}videogames/name?name=${nombre}`);
+        .get(`${URL_SERVER}videogames/name?name=${nombreMinuscula}`);
       
       
       return dispatch({

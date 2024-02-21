@@ -23,12 +23,14 @@ const reducer = (state = initialState, action) => {
         gamesApiToShow: [...action.payload]
       };
   
+    
     case GET_GENRE:
       return {
         ...state,
         gamesGenreDataBase: action.payload,
       };
   
+    
     case FILTER_GENRE:
       const opcion = action.payload
       const games = state.gamesApi
@@ -47,6 +49,7 @@ const reducer = (state = initialState, action) => {
         gamesApiToShow: action.payload === 'All' ? state.gamesApi : juegosPorGenero
       }
 
+    
     case ORDER:
       const ordenados = state.gamesApiToShow.sort((a, b) => {
         if (a.nombre && b.nombre) {
@@ -66,6 +69,7 @@ const reducer = (state = initialState, action) => {
           gamesApiToShow: [...ordenados]
       }
   
+    
     case RATINGS:
       const rating = Number(action.payload)
       const gamesToFilterRating = state.gamesApi
@@ -76,15 +80,14 @@ const reducer = (state = initialState, action) => {
         }) 
         return juegosFiltrados
       }
-
       const miRating = obtenerObjetos(gamesToFilterRating, rating);
-      console.log(miRating)
 
       return {
         ...state,
           gamesApi: [...state.gamesApi],
           gamesApiToShow: miRating
       }
+    
     
     case GET_NAME:
       return {

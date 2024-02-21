@@ -45,7 +45,6 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
   const getJuegosVisibles = () => {
     return orderGames.slice(startIndex, startIndex + itemsPerPage);
   };
-  
   const JuegosVisibles = getJuegosVisibles();
 
   useEffect(() => {
@@ -60,6 +59,10 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
     }
     
   }, [isAsending, isDescending]);
+
+  const clickForDetail = () => {
+    console.log('click in card')
+  }
   return (
     <div>
       <div className={style.cardsContainer}>
@@ -71,6 +74,7 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
               background_image={game.background_image}
               genres={game.genres}
               rating={game.rating}
+              clickForDetail={clickForDetail}
           />))}
       </div>
       
