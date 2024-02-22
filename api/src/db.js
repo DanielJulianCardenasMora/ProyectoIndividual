@@ -1,21 +1,16 @@
-require('dotenv').config();
-const { Sequelize } = require('sequelize');
+require("dotenv").config();
+const { Sequelize } = require("sequelize");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
-const gameModel = require('./models/Game')
-const genreModel = require('./models/Genre')
-
-
-
-
+const gameModel = require("./models/Game");
+const genreModel = require("./models/Genre");
 
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
   { logging: false, native: false }
 );
 
-
-gameModel(sequelize)
-genreModel(sequelize)
+gameModel(sequelize);
+genreModel(sequelize);
 
 const { Game, Genre } = sequelize.models;
 
@@ -29,10 +24,6 @@ Genre.belongsToMany(Game, {
   foreignKey: 'genreID',
   timestamps: false
 })
-
-
-
-
 
 module.exports = {
   Game,

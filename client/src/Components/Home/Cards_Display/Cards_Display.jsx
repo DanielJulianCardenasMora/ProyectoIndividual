@@ -22,7 +22,6 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
   const handleOrderDesc = () => {
     setIsDescending(true)
     setIsAsending(false);
-
   };
   
   const handleOrder = () => {

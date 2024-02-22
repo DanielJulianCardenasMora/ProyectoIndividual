@@ -1,4 +1,3 @@
-import Card_Single from "../../Components/Home/Card_Single/Card_Single"
 import Cards_Display from "../../Components/Home/Cards_Display/Cards_Display"
 import Filter_Db from "../../Components/Home/Filter_Db/Filter_Db"
 import Filter_Genre from "../../Components/Home/Filter_Genre/Filter_Genre"
@@ -19,7 +18,6 @@ import Home from "../../Components/Home/Home"
 const Home_View = ({games, gamesApiToShow}) => {
   return (
     <>
-
       <div>
         <Home />
         <Cards_Display games={games} gamesApiToShow={gamesApiToShow} />
@@ -30,7 +28,6 @@ const Home_View = ({games, gamesApiToShow}) => {
         <Search_Name/>
         <To_Next_Page />
       </div>
-   
     </>
   )
 }

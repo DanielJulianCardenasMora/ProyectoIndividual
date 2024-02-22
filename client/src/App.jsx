@@ -1,9 +1,10 @@
 import './App.css'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from "react-redux";
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { About_View, Detail_View, Form_New_View, Home_View, Landing_View, Wellcome_View } from './Views';
 import { getApiGames, getDataBaseGenres } from './Redux/actions';
+import Nav_Bar from './Components/Wellcome/Nav_Bar/Nav_Bar';
 
 
 
@@ -14,6 +15,7 @@ function App() {
   const games = useSelector((state) => state.gamesApi)
   const genres = useSelector((state) => state.gamesGenreDataBase)
   const gamesApiToShow = useSelector((state) => state.gamesApiToShow);
+  const { pathname } = useLocation()
   const dispatch = useDispatch()
   const getGames = () => {
     dispatch(getApiGames())
@@ -35,7 +37,7 @@ function App() {
   return (
     <>
       <div className='App'>
-        {/* {pathname != '/' && <NavBar onSearch={onSearch} />} */}
+        {pathname != '/' && <Nav_Bar />}
         <Routes> 
           <Route path='/' element={<Landing_View />} />
           <Route path='/wellcome' element={<Wellcome_View/>}/>

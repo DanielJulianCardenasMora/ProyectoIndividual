@@ -13,6 +13,7 @@ module.exports = (sequelize) => {
       Nombre: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true
       },
       Descripcion: {
         type: DataTypes.TEXT,
@@ -20,7 +21,7 @@ module.exports = (sequelize) => {
       },
       Imagen: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       Fecha_de_lanzamiento: {
         type: DataTypes.DATE,
@@ -28,6 +29,10 @@ module.exports = (sequelize) => {
       },
       Rating: {
         type: DataTypes.DECIMAL(10, 2),
+        allowNull: false,
+      },
+      Plataformas: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
     },
