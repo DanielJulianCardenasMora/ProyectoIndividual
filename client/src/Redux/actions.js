@@ -1,5 +1,5 @@
 // import dotenv from 'react-dotenv';
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME } from './action-types'
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL } from './action-types'
 import axios from 'axios'
 // // const { URL, API_KEY } = process.env;
 // const URL = process.env
@@ -25,7 +25,6 @@ export const getApiGames = () => {
   };
 };
 
-
 export const getDataBaseGenres = () => {
   return async (dispatch) => {
     try {
@@ -42,7 +41,6 @@ export const getDataBaseGenres = () => {
     }
   }  
 };
-
 
 export const filtroDeGenero = (genero) => {
   return {
@@ -62,6 +60,12 @@ export const getRatings = (numero) => {
   return {
     type: RATINGS,
     payload: numero
+  } 
+}
+
+export const getALL = () => {
+  return {
+    type: SHOW_ALL,
   } 
 }
 

@@ -1,0 +1,47 @@
+.bg{
+  position: relative;
+  height: 100%;
+}
+.bgimage{
+  width: 100%;
+  position: fixed;
+  transform: translate(-50%);
+  top: 0;
+}
+.container{
+  width: 55%;
+  position: relative;
+  transform: translate(-50%);
+  margin-top: 8%;
+  background-color: rgba(10, 5, 42, 0.389);
+  border-radius: 20px;
+  left:50%;
+  margin-bottom: 10%;
+}
+.obj{
+  width: 85%;
+  padding-top: 6%;
+
+}
+.obj2{
+  width: 70%;
+  padding-top: 14%;
+}
+.obj5{
+  width: 70%;
+  font-size: 0.8cqi;
+  line-height: 1;
+  text-align: left;
+}
+.obj6,
+.obj7,
+.obj8{
+  display: inline-block;
+}
+.button{
+  position: fixed;
+  top: 30%;
+  right: 8.3%;
+
+}
+

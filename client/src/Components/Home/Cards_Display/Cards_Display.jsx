@@ -78,18 +78,18 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
       </div>
       
       <div className={style.buttonsContainer}>
-        <button onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
+        <button className={style.buttons1} onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
           Anterior
         </button>
-        <button
+        <button className={style.buttons2}
           onClick={() => setCurrentPage(currentPage + 1)}
           disabled={currentPage === Math.ceil(orderGames.length / itemsPerPage)}>
           Siguiente
         </button>
-        <button onClick={handleOrder}>
+        <button className={style.buttons3} onClick={handleOrder}>
           Ascendente
         </button>
-        <button onClick={handleOrderDesc}>
+        <button className={style.buttons4} onClick={handleOrderDesc}>
           Descendente
         </button>
       </div>

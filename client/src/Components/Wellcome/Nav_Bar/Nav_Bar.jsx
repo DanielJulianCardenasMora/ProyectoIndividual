@@ -15,15 +15,18 @@ const Nav_Bar = () => {
               <h1>home</h1> 
           </Link>
         </div>
-        <Link to={'/home'}>
-          <h1>Find</h1> 
-        </Link>
-        <Link to={'/createGame'}>
-          <h1>Create game</h1>
-        </Link>
-        <Link to={'/about'}>
-          <h1>About</h1>
-        </Link>
+        
+        <div className={style.menu}>
+            <Link to={'/home'}>
+              <h1>Find</h1> 
+            </Link>
+            <Link to={'/createGame'}>
+              <h1>Create game</h1>
+            </Link>
+            <Link to={'/about'}>
+              <h1>About</h1>
+            </Link>
+        </div>
       </div>
     </>
   )

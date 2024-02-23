@@ -1,4 +1,3 @@
-import Nav_Bar from './Nav_Bar/Nav_Bar'
 import style from './Wellcome.module.css'
 
 
@@ -14,7 +13,6 @@ const Wellcome = () => {
     <>
 
       <div className={style.section1}>
-        <Nav_Bar />
         <div className={style.world}>
           <h1>Mundo</h1>  
           <h1>de los</h1>  
@@ -23,12 +21,13 @@ const Wellcome = () => {
         
         <div className={style.circleOne}>
           <div className={style.bg}>
-            <img className={style.imagen} src={'../../../src/z_imagesFonts/Images/Landing Girl 1.png'} />
+            <img className={style.imagen2} src={'../../../src/z_imagesFonts/Images/HD-wallpaper.png'} />
+            <img className={style.imagen} src={'../../../src/z_imagesFonts/Images/Landing Girl.png'} />
           </div>
         </div>
       </div>
 
-      <div className={style.separador}></div>
+      {/* <div className={style.separador}></div>
       
       <div className={style.section2}>
         <div className={style.circleTwo}>
@@ -36,13 +35,13 @@ const Wellcome = () => {
             <img className={style.imagen} />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={style.separador}></div>
 
       <div className={style.section3}>
         <div className={style.bg3}>
-          <img className={style.bg_img} src={'../../../src/z_imagesFonts/Images/Frame 1.png'} />
+          {/* <img className={style.bg_img} src={'../../../src/z_imagesFonts/Images/Frame 1.png'} /> */}
         </div>
 
         <div className={style.bg_gamers}>

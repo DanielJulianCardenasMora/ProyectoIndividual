@@ -1,4 +1,4 @@
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME } from './action-types';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL } from './action-types';
 
 
 
@@ -88,6 +88,12 @@ const reducer = (state = initialState, action) => {
           gamesApiToShow: miRating
       }
     
+    case SHOW_ALL:
+      return {
+        ...state,
+        gamesApi: [...state.gamesApi],
+        gamesApiToShow: state.gamesApi
+      }
     
     case GET_NAME:
       return {

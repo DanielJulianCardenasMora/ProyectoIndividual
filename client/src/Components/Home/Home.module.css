@@ -15,3 +15,15 @@
   position: absolute;
 }
 
+
+.section2{
+  height: 100vh;
+}
+
+.circleTwo{
+  background: radial-gradient(ellipse at 69% -10%, rgba(0, 224, 255, 1) 15%, rgba(0, 41, 255, 1) 51%, rgba(248, 66, 208, 1) 80%);
+  height: 100vh;
+  width: 100%;
+  display: absolute;
+  top: 0;
+}

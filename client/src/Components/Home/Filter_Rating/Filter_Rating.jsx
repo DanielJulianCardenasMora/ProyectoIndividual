@@ -25,7 +25,7 @@ const Filter_Rating = () => {
 
     <div className={style.container}>
       <select className={style.select} defaultValue='All' onChange={handleChange}>
-        <option>--- Todos los Ratings ---</option>
+        <option disabled='disabled' >--- Todos los Ratings ---</option>
           {ratings ? ratings.map((numero) => {
             return (
               <option key={numero} value={numero}>{numero}</option>

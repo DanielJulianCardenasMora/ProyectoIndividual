@@ -27,17 +27,13 @@ const Form_New = () => {
   };
 
   
-  let mensajeRespuesta = ''
+
   const createGame = async (gameData) => {
     try {
       const { Nombre, Descripcion, Imagen, Plataformas, Fecha_de_lanzamiento, Rating, Generos } = gameData;
-      const { data, status } = await axios
+      const { data } = await axios
         .post(`${URL_SERVER}videogames/?Nombre=${Nombre}&Descripcion=${Descripcion}&Imagen=${Imagen}&Plataformas=${Plataformas}&Fecha_de_lanzamiento=${Fecha_de_lanzamiento}&Rating=${Rating}&Generos=${Generos}`);
       alert(data)
-      if (status === 401) {
-        alert(data.message); // Muestra el mensaje de error al usuario
-        return;
-      }
     }
     catch (error) {
       alert(error.response.data.message)

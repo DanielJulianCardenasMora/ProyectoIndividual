@@ -1,7 +1,7 @@
 import style from './Search_Name.module.css'
 import { useState } from 'react'
 import { useDispatch } from "react-redux";
-import { pedirNombre } from '../../../Redux/actions';
+import { pedirNombre, getALL } from '../../../Redux/actions';
 
 
 
@@ -22,6 +22,10 @@ const Search_Name = () => {
     dispatch(pedirNombre(nombre));
   };
 
+  const handleSubmitAll = () => {
+    dispatch(getALL());
+  };
+
 
 
   return (
@@ -36,7 +40,8 @@ const Search_Name = () => {
           />
         <button type='submit'>Buscar</button>
       </form>
-        <button type='submit'>Ver todos</button>
+      
+        <button onClick={handleSubmitAll} type='submit'>Ver todos</button>
     </div>
   )
 }

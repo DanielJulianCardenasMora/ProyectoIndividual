@@ -7,24 +7,32 @@
   width: 100%;
   z-index: 100;
   top: 0;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .container h1{
-  font-family: navbar;
+  font-family: videojuegos;
   display: inline-block;
-  font-size: 30px;
+  color: rgb(255, 0, 119);
+  font-size: 20px;
   padding: 2px 35px;
   border-radius: 7px;
 }
 
 .container h1:hover{
   background-color: rgba(0, 255, 255, 0.62);
-  transition: 1s;
+  transition: 0.3s;
   border-radius: 7px;
 }
 
 .home{
-  margin-right: 55%;
+  margin-right: 0%;
+  display: inline-block;
+}
+
+.menu{
+  margin-right: 0%;
   display: inline-block;
 }
 

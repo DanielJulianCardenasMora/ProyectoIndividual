@@ -2,15 +2,16 @@
 .buttonsContainer{
   width: 100%;
   height: auto;
-
+  bottom: 0;
 }
 
 .card{
   height: 255px;
   width: 326px;
   position: relative;
-  margin-bottom: -85px;
-  align-items: center;
+  margin-bottom: -45px;
+  box-sizing: border-box;
+  transform: scale(0.85);
 }
 
 .blue{
