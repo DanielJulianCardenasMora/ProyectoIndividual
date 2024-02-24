@@ -8,7 +8,8 @@ import { orderLetter } from '../../../Redux/actions'
 
 
 
-const Cards_Display = ({ games, gamesApiToShow }) => {
+const Cards_Display = () => {
+  const gamesApiToShow = useSelector((state) => state.gamesApiToShow);
   const [currentPage, setCurrentPage] = useState(1);
   const [orderGames, setOrderGames] = useState([]);
   const [isDescending, setIsDescending] = useState(false);
@@ -33,7 +34,8 @@ const Cards_Display = ({ games, gamesApiToShow }) => {
   useEffect(() => {
     const ordenados = ordenarPorNombre(gamesApiToShow);
     setOrderGames(ordenados);
-  }, [games]); 
+    return () => setCurrentPage(1)
+  }, [gamesApiToShow]); 
   
   function ordenarPorNombre(games) {
     const juegosEnOrden = games.slice();

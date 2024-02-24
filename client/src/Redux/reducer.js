@@ -1,4 +1,4 @@
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL } from './action-types';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB } from './action-types';
 
 
 
@@ -20,7 +20,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         gamesApi: action.payload,
-        gamesApiToShow: [...action.payload]
+        gamesApiToShow: [...action.payload, ...state.gamesCreated]
       };
   
     
@@ -72,7 +72,7 @@ const reducer = (state = initialState, action) => {
     
     case RATINGS:
       const rating = Number(action.payload)
-      const gamesToFilterRating = state.gamesApi
+      const gamesToFilterRating = [...state.gamesApi, ...state.gamesCreated]
       const obtenerObjetos = (gamesToFilterRating, rating) => {
         const juegosFiltrados = gamesToFilterRating.filter((game) => {
           const numeroEntero = Math.round(game.rating);
@@ -88,6 +88,7 @@ const reducer = (state = initialState, action) => {
           gamesApiToShow: miRating
       }
     
+    
     case SHOW_ALL:
       return {
         ...state,
@@ -95,12 +96,26 @@ const reducer = (state = initialState, action) => {
         gamesApiToShow: state.gamesApi
       }
     
+    
     case GET_NAME:
       return {
         ...state,
         gamesApi: [...state.gamesApi],
         gamesApiToShow: [...action.payload]
-
+      };
+    
+    
+    case FILTER_DB:
+      return {
+        ...state,
+        gamesCreated: action.payload,
+      };
+    
+    
+    case SHOW_DB:
+      return {
+        ...state,
+        gamesApiToShow: state.gamesCreated,
       };
 
     default:

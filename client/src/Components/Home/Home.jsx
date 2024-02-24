@@ -1,7 +1,7 @@
 import style from './Home.module.css'
 
 
-
+// if id detail is long number, other controller.
 
 
 
@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <>
       <div className={style.container}>
-        {/* <img className={style.background} src={'../../../src/z_imagesFonts/Images/Group 8.png'} alt={'Estrellas del espacio'} /> */}
         <div className={style.section2}>
         <div className={style.circleTwo}>
           <div className={style.bg}>

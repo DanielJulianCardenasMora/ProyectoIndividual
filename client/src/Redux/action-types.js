@@ -6,6 +6,7 @@ export const FILTER_GENRE = 'FILTER_GENRE'
 export const RATINGS = 'RATINGS';
 export const GET_NAME = 'GET_NAME';
 export const SHOW_ALL = 'SHOW_ALL';
+export const SHOW_DB = 'SHOW_DB';
 
 
 

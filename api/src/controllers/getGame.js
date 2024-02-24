@@ -45,14 +45,3 @@ const getGame = async (req, res) => {
 
 
 module.exports = getGame;
-
-
-
-// ID.
-// Nombre.
-// Imagen.
-// Plataformas.
-// Descripción.
-// Fecha de lanzamiento.
-// Rating.
-// Géneros.

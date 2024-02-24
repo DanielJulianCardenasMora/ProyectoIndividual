@@ -4,34 +4,34 @@ module.exports = (sequelize) => {
   sequelize.define(
     "Game",
     {
-      ID: {
+      id: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
         allowNull: false,
         primaryKey: true,
       },
-      Nombre: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true
       },
-      Descripcion: {
+      description: {
         type: DataTypes.TEXT,
         allowNull: false,
       },
-      Imagen: {
+      background_image: {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      Fecha_de_lanzamiento: {
+      released: {
         type: DataTypes.DATE,
         allowNull: false,
       },
-      Rating: {
+      rating: {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
       },
-      Plataformas: {
+      platforms: {
         type: DataTypes.STRING,
         allowNull: false,
       },

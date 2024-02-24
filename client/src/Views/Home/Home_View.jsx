@@ -15,12 +15,12 @@ import Home from "../../Components/Home/Home"
 
 
 
-const Home_View = ({games, gamesApiToShow}) => {
+const Home_View = () => {
   return (
     <>
       <div>
         <Home />
-        <Cards_Display games={games} gamesApiToShow={gamesApiToShow} />
+        <Cards_Display/>
         <Filter_Db/>
         <Filter_Genre/>
         <Filter_Order/>

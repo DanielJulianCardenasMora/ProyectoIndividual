@@ -8,19 +8,19 @@ const { Game } = require('../db')
 
 const postGame = async (req, res) => {
   try {
-    const { Nombre, Descripcion, Imagen, Plataformas, Fecha_de_lanzamiento, Rating, Generos } = req.query;
+    const { name, description, background_image, platforms, released, rating, Generos } = req.query;
 
-    if (!Nombre)
+    if (!name)
       return res.status(401).json({ message: "Es necesario agregar un nombre" });
 
       const newGame = await Game.create({
    
-          Nombre,
-          Descripcion,
-          Imagen,
-          Plataformas,
-          Fecha_de_lanzamiento,
-          Rating,
+          name,
+          description,
+          background_image,
+          platforms,
+          released,
+          rating,
         
       });
 

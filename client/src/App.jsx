@@ -1,9 +1,9 @@
 import './App.css'
 import { useEffect } from 'react'
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { About_View, Detail_View, Form_New_View, Home_View, Landing_View, Wellcome_View } from './Views';
-import { getApiGames, getDataBaseGenres } from './Redux/actions';
+import { getApiGames, getDataBaseGenres, getDBGames } from './Redux/actions';
 import Nav_Bar from './Components/Wellcome/Nav_Bar/Nav_Bar';
 
 
@@ -12,9 +12,6 @@ import Nav_Bar from './Components/Wellcome/Nav_Bar/Nav_Bar';
 
 
 function App() {
-  const games = useSelector((state) => state.gamesApi)
-  const genres = useSelector((state) => state.gamesGenreDataBase)
-  const gamesApiToShow = useSelector((state) => state.gamesApiToShow);
   const { pathname } = useLocation()
   const dispatch = useDispatch()
   const getGames = () => {
@@ -23,12 +20,16 @@ function App() {
   const getGenre = () => {
     dispatch(getDataBaseGenres())
   } 
-
+  const getDB = () => {
+    dispatch(getDBGames())
+  } 
+  
 
 
   useEffect(() => {
     getGames()
     getGenre()
+    getDB()
   }, []); 
 
 
@@ -41,7 +42,7 @@ function App() {
         <Routes> 
           <Route path='/' element={<Landing_View />} />
           <Route path='/wellcome' element={<Wellcome_View/>}/>
-          <Route path='/home' element={<Home_View games={games} gamesApiToShow={ gamesApiToShow } />} />
+          <Route path='/home' element={<Home_View />} />
           <Route path='/detail/:id' element={ <Detail_View/> } />
           <Route path='/about' element={<About_View/>} />
           <Route path='/createGame' element={<Form_New_View/>}/>

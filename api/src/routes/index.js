@@ -14,21 +14,21 @@ const getGame = require("../controllers/getGame");
 const postGame = require("../controllers/postGame");
 const getGenre = require("../controllers/getGenre");
 const getAllGenres = require("../controllers/getAllGenres")
+const getDBGames = require("../controllers/getDBGames")
 
-// const login = require("../controllers/login");
+
+
 
 
 
 router.get("/videogames/name", getGameQuery);
-
-router.get("/", (req, res) => {
-  res.status(200).send('Entraste al Login')
-});
 router.get("/videogames/:id", getGameById);
 router.get("/videogames", getGame);
 router.post("/videogames", postGame);
 router.get("/genres", getGenre);
 router.get("/allGenres", getAllGenres);
+router.get("/allDBgames", getDBGames);
+
 
 
 

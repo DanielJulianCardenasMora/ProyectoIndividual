@@ -10,12 +10,12 @@ import axios from 'axios'
 
 const Form_New = () => {
   const [gameData, setGameData] = useState({
-    Nombre: '',
-    Descripcion: '',
-    Imagen: '',
-    Plataformas: '',
-    Fecha_de_lanzamiento: '',
-    Rating: '',
+    name: '',
+    description: '',
+    background_image: '',
+    platforms: '',
+    released: '',
+    rating: '',
     Generos: ''
   });
   const [errors, setErrors] = useState({});
@@ -30,9 +30,9 @@ const Form_New = () => {
 
   const createGame = async (gameData) => {
     try {
-      const { Nombre, Descripcion, Imagen, Plataformas, Fecha_de_lanzamiento, Rating, Generos } = gameData;
+      const { name, description, background_image, platforms, released, rating, Generos } = gameData;
       const { data } = await axios
-        .post(`${URL_SERVER}videogames/?Nombre=${Nombre}&Descripcion=${Descripcion}&Imagen=${Imagen}&Plataformas=${Plataformas}&Fecha_de_lanzamiento=${Fecha_de_lanzamiento}&Rating=${Rating}&Generos=${Generos}`);
+        .post(`${URL_SERVER}videogames/?name=${name}&description=${description}&background_image=${background_image}&platforms=${platforms}&released=${released}&rating=${rating}&Generos=${Generos}`);
       alert(data)
     }
     catch (error) {
@@ -52,67 +52,67 @@ const Form_New = () => {
     <div className={style.cont}>
       <div className={style.action}>
         <form className={style.formCont} onSubmit={handleSubmit}>
-          <label htmlFor="Nombre">
-            Nombre:
+          <label htmlFor="name">
+            name:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your Nombre"
-              id="Nombre"
-              name="Nombre"
-              value={gameData.Nombre}
+              placeholder="Your name"
+              id="name"
+              name="name"
+              value={gameData.name}
               onChange={handleChange}
             />
           </label>
-          {errors.Nombre && <p className={style.pa}>{errors.Nombre}</p>}
+          {errors.name && <p className={style.pa}>{errors.name}</p>}
 
 
 
-          <label htmlFor="Fecha_de_lanzamiento">
+          <label htmlFor="released">
             Fecha de lanzamiento:
             <input
               className={style.inp}
               type="text"
               placeholder="Your Fecha de lanzamiento"
-              id="Fecha_de_lanzamiento"
-              name="Fecha_de_lanzamiento"
-              value={gameData.Fecha_de_lanzamiento}
+              id="released"
+              name="released"
+              value={gameData.released}
               onChange={handleChange}
             />
           </label>
-          {errors.Fecha_de_lanzamiento && <p>{errors.Fecha_de_lanzamiento}</p>}
+          {errors.released && <p>{errors.released}</p>}
 
 
 
-          <label htmlFor="Rating">
-            Rating:
+          <label htmlFor="rating">
+            rating:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your Rating"
-              id="Rating"
-              name="Rating"
-              value={gameData.Rating}
+              placeholder="Your rating"
+              id="rating"
+              name="rating"
+              value={gameData.rating}
               onChange={handleChange}
             />
           </label>
-          {errors.Rating && <p>{errors.Rating}</p>}
+          {errors.rating && <p>{errors.rating}</p>}
 
 
 
-          <label htmlFor="Plataformas">
-            Plataformas:
+          <label htmlFor="platforms">
+            platforms:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your Plataformas"
-              id="Plataformas"
-              name="Plataformas"
-              value={gameData.Plataformas}
+              placeholder="Your platforms"
+              id="platforms"
+              name="platforms"
+              value={gameData.platforms}
               onChange={handleChange}
             />
           </label>
-          {errors.Plataformas && <p>{errors.Plataformas}</p>}
+          {errors.platforms && <p>{errors.platforms}</p>}
 
 
 
@@ -132,35 +132,35 @@ const Form_New = () => {
 
 
 
-          <label htmlFor="Imagen">
-            Imagen:
+          <label htmlFor="background_image">
+            background_image:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your Imagen"
-              id="Imagen"
-              name="Imagen"
-              value={gameData.Imagen}
+              placeholder="Your background_image"
+              id="background_image"
+              name="background_image"
+              value={gameData.background_image}
               onChange={handleChange}
             />
           </label>
-          {errors.Imagen && <p>{errors.Imagen}</p>}
+          {errors.background_image && <p>{errors.background_image}</p>}
 
 
 
-          <label htmlFor="Descripcion">
-            Descripcion:
+          <label htmlFor="description">
+            description:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your Descripcion"
-              id="Descripcion"
-              name="Descripcion"
-              value={gameData.Descripcion}
+              placeholder="Your description"
+              id="description"
+              name="description"
+              value={gameData.description}
               onChange={handleChange}
             />
           </label>
-          {errors.Descripcion && <p>{errors.Descripcion}</p>}
+          {errors.description && <p>{errors.description}</p>}
 
 
 

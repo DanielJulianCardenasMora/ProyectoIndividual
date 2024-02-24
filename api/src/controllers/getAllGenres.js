@@ -1,6 +1,4 @@
 const axios = require("axios");
-require('dotenv').config()
-const { URL, API_KEY } = process.env
 const { Genre } = require('../db')
 
 
@@ -10,7 +8,6 @@ const { Genre } = require('../db')
 
 const getAllGenres = async (req, res) => {
   try {
-  
     const allGenres = await Genre.findAll()
 
     return res.status(200).json(allGenres);
