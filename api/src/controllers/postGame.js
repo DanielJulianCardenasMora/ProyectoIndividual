@@ -1,7 +1,6 @@
 const { Game } = require('../db')
 
-// Posibilidad de seleccionar/agregar varios géneros en simultáneo.
-// Botón para crear el nuevo videojuego. 
+// recibir generos y crear su tabla intermedia
 
 
 
@@ -21,6 +20,7 @@ const postGame = async (req, res) => {
           platforms,
           released,
           rating,
+          
         
       });
 

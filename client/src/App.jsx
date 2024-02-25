@@ -23,6 +23,9 @@ function App() {
   const getDB = () => {
     dispatch(getDBGames())
   } 
+  // const getGame_Genre = () => {
+  //   dispatch(getGameGenre())
+  // } 
   
 
 
@@ -30,6 +33,7 @@ function App() {
     getGames()
     getGenre()
     getDB()
+    // getGame_Genre()
   }, []); 
 
 

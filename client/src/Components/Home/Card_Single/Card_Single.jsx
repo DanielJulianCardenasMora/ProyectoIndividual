@@ -9,12 +9,12 @@ import { Link } from "react-router-dom"
 
 
 
-const Card_Single = ({ id, name, background_image, genres, rating, clickForDetail }) => {
+const Card_Single = ({ id, name, background_image, genres, rating }) => {
 
 
 
   return (
-    <Link to={`/detail/${id}`} className={style.card} onClick={clickForDetail}>
+    <Link to={`/detail/${id}`} className={style.card}>
       <div className={style.tirdShadow}></div>
       <div className={style.secondShadow}></div>
       <div className={style.firstShadow}></div>

@@ -1,14 +1,18 @@
 import style from "./Form_New.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import validacion from './validacion'
 const URL_SERVER = 'http://localhost:3001/mundoVideoJuegos/'
 import axios from 'axios'
+import { useSelector } from "react-redux";
 
 
 
 
 
 const Form_New = () => {
+  const genres = useSelector((state) => state.gamesGenreDataBase)
+
+
   const [gameData, setGameData] = useState({
     name: '',
     description: '',
@@ -16,7 +20,7 @@ const Form_New = () => {
     platforms: '',
     released: '',
     rating: '',
-    Generos: ''
+    Generos: []
   });
   const [errors, setErrors] = useState({});
   const handleChange = (evento) => {
@@ -25,8 +29,18 @@ const Form_New = () => {
     );
     setGameData({ ...gameData, [evento.target.name]: evento.target.value });
   };
-
   
+  const handleFilter = (event) => {
+    setGameData({
+      ...gameData,
+      Generos: [...gameData.Generos, event.target.value]
+    })
+  }
+
+
+  // useEffect(() => {
+    
+  // }, [gameData.Generos]); 
 
   const createGame = async (gameData) => {
     try {
@@ -115,8 +129,22 @@ const Form_New = () => {
           {errors.platforms && <p>{errors.platforms}</p>}
 
 
-
           <label htmlFor="Generos">
+            Genero:
+            <select className={style.select} defaultValue='All' onChange={handleFilter}>
+              <option disabled='disabled' value='All'>--- Filtrar Genero ---</option>
+                {genres ? genres.map((option) => {
+                  return (
+                    <option key={option.id} value={option.name}>{option.Nombre}</option>
+                  )
+                })
+                :null}
+            </select>
+          </label>
+          <h3>Seleccionados: {gameData.Generos.join(", ") }</h3>
+
+
+          {/* <label htmlFor="Generos">
             Generos:
             <input
               className={style.inp}
@@ -128,7 +156,7 @@ const Form_New = () => {
               onChange={handleChange}
             />
           </label>
-          {errors.Generos && <p>{errors.Generos}</p>}
+          {errors.Generos && <p>{errors.Generos}</p>} */}
 
 
 

@@ -1,4 +1,4 @@
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB } from './action-types';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB, GAME_GENRE } from './action-types';
 
 
 
@@ -9,7 +9,8 @@ const initialState = {
   gamesCreated: [],
   gamesGenreDataBase: [],
   gamesRatings: [1,2,3,4,5],
-  gamesApiToShow:[]
+  gamesApiToShow: [],
+  gameGenre: []
 }
 
 
@@ -117,6 +118,13 @@ const reducer = (state = initialState, action) => {
         ...state,
         gamesApiToShow: state.gamesCreated,
       };
+    
+    
+    // case GAME_GENRE:
+    //   return {
+    //     ...state,
+    //     gameGenre: action.payload,
+    //   };
 
     default:
         return state

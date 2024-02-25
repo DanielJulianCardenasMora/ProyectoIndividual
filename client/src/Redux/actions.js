@@ -1,8 +1,5 @@
-// import dotenv from 'react-dotenv';
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB } from './action-types'
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB, GAME_GENRE } from './action-types'
 import axios from 'axios'
-// // const { URL, API_KEY } = process.env;
-// const URL = process.env
 const URL_SERVER = 'http://localhost:3001/mundoVideoJuegos/'
 
 
@@ -110,3 +107,19 @@ export const getOnlyDBGames = () => {
   } 
 }
 
+// export const getGameGenre = () => {
+//   return async (dispatch) => {
+//     try {
+//       const { data } = await axios
+//         .get(`${URL_SERVER}gamegenre`);
+
+//       return dispatch({
+//         type: GAME_GENRE,
+//         payload: data,
+//       });
+//     }
+//     catch (error) {
+//       alert(error.message);
+//     }
+//   }  
+// };

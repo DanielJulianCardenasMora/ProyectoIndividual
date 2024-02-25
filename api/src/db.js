@@ -14,6 +14,7 @@ genreModel(sequelize);
 
 const { Game, Genre } = sequelize.models;
 
+
 Game.belongsToMany(Genre, {
   through: 'Game_Genre',
   foreignKey: 'gameID',

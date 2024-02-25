@@ -61,9 +61,7 @@ const Cards_Display = () => {
     
   }, [isAsending, isDescending]);
 
-  const clickForDetail = () => {
-    console.log('click in card')
-  }
+
   return (
     <div>
       <div className={style.cardsContainer}>
@@ -75,7 +73,6 @@ const Cards_Display = () => {
               background_image={game.background_image}
               genres={game.genres}
               rating={game.rating}
-              clickForDetail={clickForDetail}
           />))}
       </div>
       
