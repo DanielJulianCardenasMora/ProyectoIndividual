@@ -89,13 +89,13 @@ const Cards_Display = () => {
           Siguiente
         </button>
         <button className={style.buttons3} onClick={handleOrder}>
-          Ascendente
+          Asc 
         </button>
         <button className={style.buttons4} onClick={handleOrderDesc}>
-          Descendente
+          Des 
         </button>
       </div>
-</div>
+    </div>
   );
 };
 

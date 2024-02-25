@@ -1,4 +1,3 @@
-
 .buttonsContainer{
   width: 100%;
   height: auto;
@@ -9,13 +8,12 @@
   height: 255px;
   width: 326px;
   position: relative;
-  margin-bottom: -45px;
+  margin-bottom: -25px;
   box-sizing: border-box;
   transform: scale(0.85);
 }
 
 .blue{
-  background-color: rgb(93, 0, 255);
   height: 244px;
   width: 312px;
   position: absolute;
@@ -25,7 +23,6 @@
 }
 
 .lightBlue{
-  background-color: rgb(23, 80, 223);
   height: 197.77px;
   width: 312px;
   position: absolute;
@@ -35,7 +32,7 @@
 }
 
 .pink{
-  background-color: rgba(255, 0, 195, 0.715);
+  background-color: rgba(242, 0, 255, 0.594);
   height: 57.36px;
   width: 312px;
   bottom: 0px;
@@ -43,7 +40,6 @@
   left: 50%;
   transform: translate(-50%);
   border-radius: 0px 0px 66px 66px;
-  padding-top: 10px;
   box-sizing: border-box;
 }
 
@@ -78,13 +74,14 @@
 }
 
 .title{
-  line-height: 3px;
-  font-size: 15px;
+  color: rgb(4, 4, 145);
+  line-height: 4px;
+  font-size: 14px;
   position: relative;
 }
 
 .imagen{
-  background-color: rgb(39, 30, 215);
+  background-color: rgb(8, 0, 151);
   height: 244px;
   width: 312px;
   position: absolute;

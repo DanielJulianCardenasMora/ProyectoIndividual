@@ -1,6 +1,41 @@
 .container{
-  left: 30%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  display: inline-block;
+  height: 100px;
+  right: 50%;
+}
+.container form ::placeholder{
+  font-size: 11px;
+  color: rgb(216, 216, 216);
+}
+.container2{
+  position: fixed;
+  left: 26.5%;
+  height: 100px;
+  bottom: 0;
+}
+.container2 form{
+  position: absolute;
+  bottom: 16%;
+}
+.container2 input{
+  background-color: rgba(0, 0, 0, 0.317);
+  height: 24px;
+  width: 150px;
+  border-radius: 6px;
+  outline: none;
+  padding-left: 8px;
+  color: rgb(255, 255, 255);
+  font-family: 'Dosis', sans-serif;
+  font-size: 15px;
+  margin-bottom: 7px;
+  
+}
+
+.vertodos{
+  position: absolute;
+  bottom: 59%;
+  right: 50%;
+  transform: translate(50%);
+  width: 100px;
 }

@@ -1,3 +1,13 @@
+.container{
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  left: 50%;
+}
 .buttonDB{
   position: absolute;
+  bottom: 11%;
+  left: 0;
+  transform: translate(-50%);
+  width: 100px;
 }

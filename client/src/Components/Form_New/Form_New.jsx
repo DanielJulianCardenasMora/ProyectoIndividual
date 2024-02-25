@@ -53,18 +53,18 @@ const Form_New = () => {
       <div className={style.action}>
         <form className={style.formCont} onSubmit={handleSubmit}>
           <label htmlFor="name">
-            name:
+            Nombre:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your name"
+              placeholder=""
               id="name"
               name="name"
               value={gameData.name}
               onChange={handleChange}
             />
           </label>
-          {errors.name && <p className={style.pa}>{errors.name}</p>}
+          {errors.name && <p>{errors.name}</p>}
 
 
 
@@ -73,7 +73,7 @@ const Form_New = () => {
             <input
               className={style.inp}
               type="text"
-              placeholder="Your Fecha de lanzamiento"
+              placeholder="DD / MM / AAAA"
               id="released"
               name="released"
               value={gameData.released}
@@ -85,11 +85,11 @@ const Form_New = () => {
 
 
           <label htmlFor="rating">
-            rating:
+            Rating:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your rating"
+              placeholder=""
               id="rating"
               name="rating"
               value={gameData.rating}
@@ -101,11 +101,11 @@ const Form_New = () => {
 
 
           <label htmlFor="platforms">
-            platforms:
+            Plataformas:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your platforms"
+              placeholder=""
               id="platforms"
               name="platforms"
               value={gameData.platforms}
@@ -121,7 +121,7 @@ const Form_New = () => {
             <input
               className={style.inp}
               type="text"
-              placeholder="Your Generos"
+              placeholder=""
               id="Generos"
               name="Generos"
               value={gameData.Generos}
@@ -133,11 +133,11 @@ const Form_New = () => {
 
 
           <label htmlFor="background_image">
-            background_image:
+            Link imagen:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your background_image"
+              placeholder=""
               id="background_image"
               name="background_image"
               value={gameData.background_image}
@@ -149,11 +149,11 @@ const Form_New = () => {
 
 
           <label htmlFor="description">
-            description:
+            Description:
             <input
               className={style.inp}
               type="text"
-              placeholder="Your description"
+              placeholder=""
               id="description"
               name="description"
               value={gameData.description}

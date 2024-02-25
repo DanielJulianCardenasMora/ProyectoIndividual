@@ -2,21 +2,14 @@
   width: 100%;
 }
 
-.circleOne{
-  background: rgb(54, 47, 255);
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  top: 0;
-}
-
 .bg{
   height: 100vh;
   width: 100%;
+  background-color: rgb(0, 0, 140);
 }
 
 .imagen{
-  height: 75%;
+  height: 70%;
   left: 40%;
   bottom: 0%;
   position: absolute;
@@ -29,17 +22,6 @@
   width: 100%;
 }
 
-.section2{
-  height: 100vh;
-}
-
-.circleTwo{
-  background: rgb(46, 72, 241);
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  top: 0;
-}
 
 .section3{
   position: relative;
@@ -83,11 +65,6 @@
   bottom: 3.5%;
 }
 
-.separador{
-  height: 4vh;
-  background-color: rgb(71, 110, 251);
-}
-
 .section_text{
   height: 75%;
   width: 25%;
@@ -126,16 +103,6 @@
   -5px 0px 5px rgba(0, 0, 0, 60%); */
    box-shadow: inset 0px 0px 35px rgba(0, 0, 0, 80%); 
 }
-
-/* .world::after {
-  border-radius: 40px;
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1; 
-  box-shadow: 5px 0px 5px rgba(0, 0, 0, 40%),
-  -5px 0px 5px rgba(0, 0, 0, 60%);
-} */
 
 
 .world h1{

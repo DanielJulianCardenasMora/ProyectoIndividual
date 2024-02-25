@@ -22,12 +22,10 @@ const Filter_Db = () => {
 
 
   return (
-    <div>Filter_Db
-
+    <div className={ style.container }>
       <button className={ style.buttonDB } onClick={handleChange}>
-          Ver tus juegos creados
+          Creados
         </button>
-
     </div>
   )
 }

@@ -29,19 +29,21 @@ const Search_Name = () => {
 
 
   return (
-    <div className={style.container}>
-      <form onSubmit={handleSubmit}>
-        <input
-          type='text'
-          name='nombre'
-          value={nombre}
-          onChange={handleInputChange}
-          placeholder='Palabra clave de nombre'
-          />
-        <button type='submit'>Buscar</button>
-      </form>
-      
-        <button onClick={handleSubmitAll} type='submit'>Ver todos</button>
+      <div className={style.container}>
+        <div className={style.container2}>
+          <form onSubmit={handleSubmit}>
+            <input
+              type='text'
+              name='nombre'
+              value={nombre}
+              onChange={handleInputChange}
+              placeholder='Palabra clave de nombre'
+              />
+            <button type='submit'>Buscar</button>
+          </form>
+        </div>
+
+      <button className={style.vertodos} onClick={handleSubmitAll} type='submit'>Ver todos</button>
     </div>
   )
 }

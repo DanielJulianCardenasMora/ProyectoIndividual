@@ -1,46 +1,33 @@
 .container{
-  width: 10%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: inline-block;
+  right: 31%;
+  height: 100px;
+  width: 200px;
 }
 
 :root {
-  --arrow-bg: rgba(17, 175, 11, 0.8);
   --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
-  --option-bg: rgb(6, 27, 216);
-  --select-bg: rgba(17, 175, 11, 0.5);
 }
 
 
 .select {
-
-
   appearance: none;
   border: 0;
   outline: 0;
-  font: inherit;
-
-  width: 20rem;
-  padding: 0.5rem 4rem 0.5rem 1.5rem;
-  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
-    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  width: 100%;
+  padding: 0.5rem 3rem 0.5rem 1.5rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, rgba(17, 175, 11, 0.8) 3em, rgba(17, 175, 11, 0.5) 3em);
   color: rgb(12, 11, 119);
-  border-radius: 0.25em;
-  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 2px 0.5em 0px rgba(0, 0, 0, 80%);
   cursor: pointer;
-
-  &::-ms-expand {
-    display: none;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
+  bottom: 50%;
+  position: absolute;
+  transform: translate(0, 50%);
 }
 
 .select option {
-  color: inherit;
   background-color: rgb(24, 196, 53);
 }

@@ -50,3 +50,12 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+button{
+  box-sizing:content-box;
+  border: 0;
+  padding: 6px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom right, #43b7ff 5%, #011afc 20%, #0d0081 50%, #0000a2 75%, #382aff 90%);
+}
