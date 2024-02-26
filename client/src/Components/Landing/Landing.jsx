@@ -19,7 +19,7 @@ const Landing = () => {
       </div>
         
       <div className={style.leftImages}>
-        <img className={style.dragon} src={'../../../src/z_imagesFonts/Images/Gilr and dragon 1.png'} />
+        <img className={style.dragon} src={'../../../src/z_imagesFonts/Images/Gilr and dragon.png'} />
         <img className={style.warrior} src={'../../../src/z_imagesFonts/Images/Wariioire.png'} />
       </div>
     </>
