@@ -61,8 +61,9 @@ const Form_New = () => {
   
 
 
-
   return (
+    <div className={style.background}>
+    <img className={style.bg2} src={'../../../src/z_imagesFonts/Images/robot.png'} alt={"fondo"} />
     <div className={style.cont}>
       <div className={style.action}>
         <form className={style.formCont} onSubmit={handleSubmit}>
@@ -87,7 +88,7 @@ const Form_New = () => {
             <input
               className={style.inp}
               type="text"
-              placeholder="DD / MM / AAAA"
+              placeholder="DD/MM/AAAA"
               id="released"
               name="released"
               value={gameData.released}
@@ -129,10 +130,10 @@ const Form_New = () => {
           {errors.platforms && <p>{errors.platforms}</p>}
 
 
-          <label htmlFor="Generos">
-            Genero:
+          <label  className={style.genero} htmlFor="Generos">
+            Genero:{''}
             <select className={style.select} defaultValue='All' onChange={handleFilter}>
-              <option disabled='disabled' value='All'>--- Filtrar Genero ---</option>
+              <option disabled='disabled' value='All'>- Filtrar Genero -</option>
                 {genres ? genres.map((option) => {
                   return (
                     <option key={option.id} value={option.name}>{option.Nombre}</option>
@@ -141,7 +142,7 @@ const Form_New = () => {
                 :null}
             </select>
           </label>
-          <h3>Seleccionados: {gameData.Generos.join(", ") }</h3>
+          <h3 className={style.seleccionados}>Seleccionados: {gameData.Generos.join(", ") }</h3>
 
 
           {/* <label htmlFor="Generos">
@@ -194,11 +195,12 @@ const Form_New = () => {
 
 
           <button className={style.buttonForm}>Crear mi juego</button>
-          <h3 className={style.font}>Invitado, con una "x" en ambas casillas</h3>
+          <h3 className={style.font}>Preciona el boton para guardar</h3>
         </form>
       </div>
 
-    </div>
+      </div>
+      </div>
   );
 };
 

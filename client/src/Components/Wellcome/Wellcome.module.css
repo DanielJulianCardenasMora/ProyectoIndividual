@@ -16,7 +16,13 @@
 }
 
 .imagen2{
-  height: auto;
+  height: 100vh;
+  position: absolute;
+  transform: translate(-50%);
+  width: 100%;
+}
+.imagen3{
+  height: 100vh;
   position: absolute;
   transform: translate(-50%);
   width: 100%;
@@ -47,43 +53,64 @@
 .gamer1{
   position: absolute;
   height: 35%;
-  left: 3%;
-  top: 5%;
+  left: 5%;
+  top: 15%;
 }
 
-.gamer2{
+/* .gamer2{
   position: absolute;
   height: 40%;
-  left: 18%;
-  top: 45%;
-}
+  left: 20%;
+  top: 53%;
+} */
 
 .gamer3{
   position: absolute;
   height: 35%;
-  left: 34%;
-  bottom: 3.5%;
+  left: 25%;
+  bottom: 8%;
 }
 
 .section_text{
   height: 75%;
-  width: 25%;
-  background-color: yellow;
+  width: 38%;
+  background-color: rgba(0, 0, 0, 0.467);
   position: absolute;
-  top: 12.5%;
-  right: 5%;
+  top: 17%;
+  left: 51%;
+  margin: 0;
+  font-family: instrucciones;
+  border-left: 4px solid rgb(94, 94, 94);
+  border-right: 4px solid rgb(94, 94, 94);
 }
 
 .section_text h1{
-  background-color: black;
+  margin: 10% 0; 
+  font-size: 1.6cqi;
+  color: rgb(31, 230, 0);
 }
 
 .section_text h2{
-  background-color: rgb(218, 76, 76);
+  background-color: rgba(0, 0, 0, 0.452);
+  color: rgb(125, 255, 120);
+  padding: 0 30px;
+  border-radius: 20px;
+  margin: 0;
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.5cqi;
 }
 
 .section_text h3{
-  background-color: rgb(79, 237, 126);
+  margin: 0;
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 40px;
+  font-size: 1.2cqi;
 }
 
 .world{

@@ -26,7 +26,7 @@ const postGame = async (req, res) => {
 
     newGame.addGenres(Generos)
     
-    res.status(200).json('Agregaste el juego con exito!!!!!, dirigete al boton "Find" para ver tus juegos creados');
+    res.status(200).json('Agregaste el juego con exito!!!!!, dirigete a "Find" para ver tus juegos creados');
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

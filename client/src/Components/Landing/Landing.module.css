@@ -21,7 +21,7 @@
 .warrior{
   height: 45%;
   position: absolute;
-  right: 0%;
+  left: -40px;
   bottom: 0%;
 }
 
@@ -29,7 +29,7 @@
   width: 120px;
   height: 40px;
   position: absolute;
-  top: 21%;
+  top: 29%;
   right: 50%;
   border-radius: 20px;
   transform: translate(50%);
