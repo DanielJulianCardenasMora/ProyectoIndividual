@@ -13,35 +13,79 @@
   position: relative;
   transform: translate(-50%);
   margin-top: 8%;
-  background-color: rgba(10, 5, 42, 0.389);
+  background-color: rgba(10, 5, 42, 0.622);
   border-radius: 20px;
   left:50%;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
+  padding-bottom: 5%;
 }
 .obj{
   width: 85%;
   padding-top: 6%;
-
+  background-color: rgb(255, 157, 0);
+  padding: 0.5%;
+  margin-top: 9%;
+  margin-bottom: 6%;
+  border-radius: 20px;
 }
 .obj2{
   width: 70%;
   padding-top: 14%;
+  background-color: rgb(255, 157, 0);
+  padding: 0.5%;
+  border-radius: 20px;
+  margin-bottom: 2%;
+}
+.obj3{
+  font-size: 20px;
+  margin: 0;
+  font-family: instrucciones;
+}
+.obj4{
+  font-size: 65px;
+  margin: 5%;
+  font-family: Navbar;
+  background-color: aquamarine;
+  width: 50%;
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: rgba(119, 0, 255, 0.904);
+  border: 3px solid black
 }
 .obj5{
   width: 70%;
   font-size: 0.8cqi;
   line-height: 1;
   text-align: left;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 7%;
+  margin-top: 4%;
+  background-color: rgba(0, 234, 255, 0.787);
+  color: black;
+  padding: 20px 30px;
+  font-family: instrucciones;
+  font-size: 1.2cqi;
+  border-radius: 15px;
 }
 .obj6,
 .obj7,
 .obj8{
   display: inline-block;
+  background-color: rgba(0, 0, 255, 0.653);
+  position: relative;
+  padding: 0 30px;
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-family: instrucciones;
 }
 .button{
   position: fixed;
   top: 30%;
   right: 8.3%;
-
+  border: 2px solid white;
 }
 

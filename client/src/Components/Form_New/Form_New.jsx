@@ -11,8 +11,6 @@ import { useSelector } from "react-redux";
 
 const Form_New = () => {
   const genres = useSelector((state) => state.gamesGenreDataBase)
-
-
   const [gameData, setGameData] = useState({
     name: '',
     description: '',
@@ -22,6 +20,7 @@ const Form_New = () => {
     rating: '',
     Generos: []
   });
+  const [gameGenreShow, setGameGenreShow] = useState([])
   const [errors, setErrors] = useState({});
   const handleChange = (evento) => {
     setErrors(
@@ -35,12 +34,20 @@ const Form_New = () => {
       ...gameData,
       Generos: [...gameData.Generos, event.target.value]
     })
+    // const selectedGenreName = event.target;
+    
+    const selectedGenreId = event.target.value;
+    
+    // Assuming `genres` array exists and maps to your genres data
+    const selectedGenre = genres.find(
+      (genre) => genre.id === parseInt(selectedGenreId, 10)
+      );
+      
+      setGameGenreShow([...gameGenreShow, selectedGenre.Nombre])
+
   }
 
 
-  // useEffect(() => {
-    
-  // }, [gameData.Generos]); 
 
   const createGame = async (gameData) => {
     try {
@@ -53,12 +60,11 @@ const Form_New = () => {
       alert(error.response.data.message)
     }
   }
-
   const handleSubmit = (evento) => {
     evento.preventDefault();
     createGame(gameData);
   };
-  
+
 
 
   return (
@@ -136,29 +142,13 @@ const Form_New = () => {
               <option disabled='disabled' value='All'>- Filtrar Genero -</option>
                 {genres ? genres.map((option) => {
                   return (
-                    <option key={option.id} value={option.name}>{option.Nombre}</option>
+                    <option key={option.id} data-nombre={option.Nombre} value={option.id}>{option.Nombre}</option>
                   )
                 })
                 :null}
             </select>
           </label>
-          <h3 className={style.seleccionados}>Seleccionados: {gameData.Generos.join(", ") }</h3>
-
-
-          {/* <label htmlFor="Generos">
-            Generos:
-            <input
-              className={style.inp}
-              type="text"
-              placeholder=""
-              id="Generos"
-              name="Generos"
-              value={gameData.Generos}
-              onChange={handleChange}
-            />
-          </label>
-          {errors.Generos && <p>{errors.Generos}</p>} */}
-
+          <h3 className={style.seleccionados}>Seleccionados: {gameGenreShow.join(", ") }</h3>
 
 
           <label htmlFor="background_image">

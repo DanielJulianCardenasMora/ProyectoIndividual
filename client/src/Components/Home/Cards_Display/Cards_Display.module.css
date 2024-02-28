@@ -19,12 +19,12 @@
   display: flex;
   align-items: center;
   column-count: 5;
-  padding-left: 60px;
-  padding-right: 60px;
   height: 75vh;
   position: absolute;
   top: 8%;
-  
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
 }
 .buttons1{
   position: absolute;
@@ -49,6 +49,8 @@
   bottom: 18%;
   left: 13%;
   width: 5%;
-
+}
+.cardsContainer2{
+  position: absolute;
 }
 

@@ -1,0 +1,28 @@
+.bg{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.bgimage{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transform: translate(-50%);
+}
+.container{
+  transform: translate(-50%);
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 25%;
+  background-color: rgba(77, 0, 67, 0.783);
+  padding: 20px 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  text-align: justify;
+  font-family: instrucciones;
+}
+.container h3{
+  position:relative;
+}
+

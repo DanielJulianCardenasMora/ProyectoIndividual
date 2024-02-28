@@ -1,4 +1,4 @@
-import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB, GAME_GENRE } from './action-types';
+import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB } from './action-types';
 
 
 
@@ -10,7 +10,8 @@ const initialState = {
   gamesGenreDataBase: [],
   gamesRatings: [1,2,3,4,5],
   gamesApiToShow: [],
-  gameGenre: []
+  gameGenre: [],
+  message:''
 }
 
 
@@ -47,7 +48,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         gamesApi: [...state.gamesApi],
-        gamesApiToShow: action.payload === 'All' ? state.gamesApi : juegosPorGenero
+        gamesApiToShow: action.payload === 'All' ? state.gamesApi : juegosPorGenero,
+        message: !juegosPorGenero[1]?'En nuestros 100 juegos de muestra, no tenemos juegos con ese genero':''
       }
 
     
@@ -67,7 +69,8 @@ const reducer = (state = initialState, action) => {
       
       return {
         ...state,
-          gamesApiToShow: [...ordenados]
+        gamesApiToShow: [...ordenados],
+        message: ''  
       }
   
     
@@ -82,11 +85,12 @@ const reducer = (state = initialState, action) => {
         return juegosFiltrados
       }
       const miRating = obtenerObjetos(gamesToFilterRating, rating);
-
+      
       return {
         ...state,
-          gamesApi: [...state.gamesApi],
-          gamesApiToShow: miRating
+        gamesApi: [...state.gamesApi],
+        gamesApiToShow: miRating,
+        message: !miRating[1]?'En nuestros 100 juegos de muestra, no tenemos juegos con ese rating':''
       }
     
     
@@ -94,7 +98,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         gamesApi: [...state.gamesApi],
-        gamesApiToShow: state.gamesApi
+        gamesApiToShow: state.gamesApi,
+        message: ''
       }
     
     
@@ -102,7 +107,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         gamesApi: [...state.gamesApi],
-        gamesApiToShow: [...action.payload]
+        gamesApiToShow: [...action.payload],
+        message: ''
       };
     
     
@@ -110,6 +116,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         gamesCreated: action.payload,
+        message: ''
       };
     
     
@@ -117,14 +124,10 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         gamesApiToShow: state.gamesCreated,
+        message: ''
       };
     
     
-    // case GAME_GENRE:
-    //   return {
-    //     ...state,
-    //     gameGenre: action.payload,
-    //   };
 
     default:
         return state

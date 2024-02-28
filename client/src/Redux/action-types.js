@@ -7,7 +7,6 @@ export const RATINGS = 'RATINGS';
 export const GET_NAME = 'GET_NAME';
 export const SHOW_ALL = 'SHOW_ALL';
 export const SHOW_DB = 'SHOW_DB';
-export const GAME_GENRE = 'GAME_GENRE';
 
 
 

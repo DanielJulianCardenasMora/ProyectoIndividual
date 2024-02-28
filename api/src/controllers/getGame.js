@@ -2,14 +2,10 @@ require('dotenv').config();
 const axios = require("axios");
 const { URL, API_KEY } = process.env;
 
-// https://api.rawg.io/api/games?key=60168d0ccdc54d229cb076e54698a8fa
 
-// /videogames
 
-// hacer que se creen las tablas de platform en este mismo codigo
-// Debe poder buscarlo independientemente de mayúsculas o minúsculas.
-// Si no existe el videojuego, debe mostrar un mensaje adecuado.
-// hacer la primera iteracion al empezar desde el front
+
+
 
 
 const getGame = async (req, res) => {

@@ -1,11 +1,25 @@
 import style from './Home.module.css'
+import { useEffect } from 'react'
+import { useDispatch } from "react-redux";
+import { getDBGames } from '../../Redux/actions';
+import { useNavigate } from "react-router-dom";
 
 
-// if id detail is long number, other controller.
 
 
 
 const Home = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const getDB = () => {
+    dispatch(getDBGames())
+  } 
+  
+  useEffect(() => {
+    getDB()
+  }, []); 
+
+
   return (
     <>
       <div className={style.container}>

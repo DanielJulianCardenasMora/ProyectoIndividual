@@ -4,9 +4,6 @@ const { URL, API_KEY } = process.env;
 
 
 
-// entregar los de la db y los de la api
-// incluir los datos del genero al q esta asociado en vg/id
-
 const getGameQuery = async (req, res) => {
   const { name } = req.query;
 

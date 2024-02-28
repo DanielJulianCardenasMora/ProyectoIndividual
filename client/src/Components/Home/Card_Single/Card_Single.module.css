@@ -23,7 +23,7 @@
 }
 
 .pink{
-  background-color: rgba(242, 0, 255, 0.594);
+  background-color: rgb(202, 0, 213);
   height: 57.36px;
   width: 312px;
   bottom: 0px;
@@ -57,8 +57,9 @@
 .title{
   color: rgb(4, 4, 145);
   line-height: 4px;
-  font-size: 14px;
+  font-size: 15px;
   position: relative;
+  margin-top: 10px;
 }
 
 .imagen{

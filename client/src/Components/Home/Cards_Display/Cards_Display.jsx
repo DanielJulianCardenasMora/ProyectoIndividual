@@ -1,8 +1,8 @@
 import Card_Single from '../Card_Single/Card_Single'
 import style from './Cards_Display.module.css'
 import React, { useState, useEffect } from 'react'
-import { useSelector, useDispatch } from "react-redux";
-import { orderLetter } from '../../../Redux/actions'
+import { useSelector } from "react-redux";
+
 
 
 
@@ -10,26 +10,22 @@ import { orderLetter } from '../../../Redux/actions'
 
 const Cards_Display = () => {
   const gamesApiToShow = useSelector((state) => state.gamesApiToShow);
+  const alerta = useSelector((state) => state.message);
   const [currentPage, setCurrentPage] = useState(1);
   const [orderGames, setOrderGames] = useState([]);
   const [isDescending, setIsDescending] = useState(false);
   const [isAsending, setIsAsending] = useState(false);
-  const dispatch = useDispatch()
   const itemsPerPage = 15; 
   const startIndex = (currentPage - 1) * itemsPerPage;
 
-
-  
   const handleOrderDesc = () => {
     setIsDescending(true)
     setIsAsending(false);
   };
-  
   const handleOrder = () => {
     setIsAsending(true)
     setIsDescending(false);
   };
-
 
   useEffect(() => {
     const ordenados = ordenarPorNombre(gamesApiToShow);
@@ -74,6 +70,7 @@ const Cards_Display = () => {
               genres={game.genres}
               rating={game.rating}
           />))}
+        <div className={style.cardsContainer2}>{alerta}</div>
       </div>
       
       <div className={style.buttonsContainer}>

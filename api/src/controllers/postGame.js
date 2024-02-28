@@ -1,6 +1,9 @@
 const { Game } = require('../db')
 
-// recibir generos y crear su tabla intermedia
+
+
+
+
 
 
 
@@ -12,19 +15,22 @@ const postGame = async (req, res) => {
     if (!name)
       return res.status(401).json({ message: "Es necesario agregar un nombre" });
 
+      const genreArray = Generos.split(',').map(genreId => {
+        const idNumero = parseInt(genreId, 10);
+
+        return idNumero;
+      });
+  
       const newGame = await Game.create({
-   
           name,
           description,
           background_image,
           platforms,
           released,
           rating,
-          
-        
       });
-
-    newGame.addGenres(Generos)
+   
+    newGame.addGenres(genreArray)
     
     res.status(200).json('Agregaste el juego con exito!!!!!, dirigete a "Find" para ver tus juegos creados');
   } catch (error) {
