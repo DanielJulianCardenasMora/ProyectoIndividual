@@ -59,3 +59,7 @@ button{
   cursor: pointer;
   background-image: linear-gradient(to bottom right, #43b7ff 5%, #011afc 20%, #0d0081 50%, #0000a2 75%, #382aff 90%);
 }
+
+button:hover{
+  background-image: linear-gradient(to bottom right, #6fc7ff 5%, #3348ff 20%, #241a84 50%, #2121a7 75%, #6156ff 90%);
+}

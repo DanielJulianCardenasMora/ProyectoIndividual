@@ -24,7 +24,7 @@ const Home = () => {
     <>
       <div className={style.container}>
         <div className={style.section2}>
-        <div className={style.circleTwo}>
+          <div className={style.circleTwo}>
           <div className={style.bg}>
             <img className={style.imagen} />
           </div>
