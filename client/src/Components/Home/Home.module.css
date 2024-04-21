@@ -21,11 +21,13 @@
 }
 
 .circleTwo{
-  background: radial-gradient(ellipse at 61% -10%, rgba(0, 224, 255, 1) 5%, rgb(10, 0, 151) 31%,rgb(164, 1, 193) 82%, rgb(233, 25, 188) 90%);
+  /* background: radial-gradient(ellipse at 61% -10%, rgba(0, 224, 255, 1) 5%, rgb(10, 0, 151) 31%,rgb(164, 1, 193) 82%, rgb(233, 25, 188) 90%);
+  display: absolute;
+  top: 0; */
+  background-image: url("../../z_imagesFonts/Images/back.jpg");
+  background-size: cover;
   height: 100vh;
   width: 100%;
-  display: absolute;
-  top: 0;
 }
 
 .botonPresentacion{

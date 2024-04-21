@@ -1,31 +1,56 @@
 .cont{
-  top: 40%;
-  left:50%;
+  top: 32%;
+  left: 33.2%;
   flex-direction: column;
   align-items: center;
   position: absolute;
   transform: translate(-50%, -50%);
   font-family: instrucciones;
-  color: rgb(255, 172, 222);
+  color: rgb(239, 239, 239);
 }
 .cont label{
-  font-size: 20px;
+  font-size: 1vw;
+  height: 5%;
 }
 
 .background{
   position: relative;
+  height: 120vh;
+  background-color: rgb(4, 0, 255);
+  /* background: linear-gradient(0deg, rgb(0, 0, 170) 23%, rgba(0, 188, 212, 1) 37%, rgba(16, 0, 112, 1) 50%);
+  background: linear-gradient(0deg, rgba(2, 0, 255, 1) 0%, rgba(0, 188, 212, 1) 8%, rgba(16, 0, 112, 1) 16%); */
+  background: linear-gradient(0deg, rgba(2, 0, 255, 1) 1%, rgba(0, 188, 212, 1) 5%, rgb(21, 103, 217) 9%, rgb(23, 47, 232) 19%, rgb(42, 15, 192) 38%, rgb(16, 87, 208) 75%);
+  overflow: hidden;
+}
+.back{
+  background-image: url('../../z_imagesFonts/Images/ray.png');
+  height: 120vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 80%;
+  transform: rotate(81deg);
+  position: absolute;
+  right: -30%;
+  top: 12%;
+}
+.back2{
+  background-image: url('../../z_imagesFonts/Images/ray2.png');
   height: 150vh;
-  background-color: rgb(6, 4, 97);
-  background: linear-gradient(0deg, rgb(0, 0, 170) 23%, rgba(0, 188, 212, 1) 37%, rgba(16, 0, 112, 1) 50%);
-  background: linear-gradient(0deg, rgba(2, 0, 255, 1) 0%, rgba(0, 188, 212, 1) 8%, rgba(16, 0, 112, 1) 16%);
-  background: linear-gradient(0deg, rgba(2, 0, 255, 1) 1%, rgba(0, 188, 212, 1) 5%, rgba(27, 0, 186, 1) 9%, rgba(26, 0, 182, 1) 19%, rgba(21, 0, 145, 1) 38%, rgb(6, 4, 97) 75%);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(85deg);
+  position: absolute;
+  right: 15%;
+  top: -7%;
 }
 
 
 .bg2{
   height: 110%;
   position: absolute;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%);
   top: -10%;
   border-left: 10px double rgb(104, 217, 255);
@@ -34,12 +59,10 @@
 
 .action{
   display: flex; 
+  height: 60vh;
 }
 
-.action:hover .formCont{
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 30px 10px rgba(0, 0, 0, 0.75);
-}
+
 
 .inp {
   background-color: rgb(255, 255, 255, 80%);
@@ -47,14 +70,14 @@
   border-radius: 6px;
   border: none;
   outline: none;
-  font-size: 11px;
+  font-size: .8vw;
   color: black;
   width: 130px;
   margin-left: 30px;
 }    
 
 .select{
-  background-color: rgb(14, 0, 76);
+  background-color: rgb(113, 166, 246);
   border-radius: 5px;
   height: 25px;
   width: 133px;
@@ -67,6 +90,7 @@
   line-height: 1;
   margin: 12px auto;
   text-align: right;
+  margin: 0;
 }
 .formCont::placeholder{
   font-size: 16px;
@@ -74,35 +98,41 @@
 }
 
 .formCont p{
-  line-height: 2px;
   color: red;
+  margin-top: .5%;
+  margin-bottom: 1%;
+  line-height: 0;
 }
 
 .formCont{
   display:flex;
   flex-wrap: wrap;
-  width: 380px;
-  height: 530px;
+  width: 20vw;
+  height: 100%;
   justify-content: flex-end;
-  border: 3px solid orange;
+  border: 3px solid rgb(171, 171, 171);
   border-radius: 20px;
-  padding: 40px 95px 0px 45px;
-  background-color: hsla(242, 96%, 31%, 0.6);
-  box-shadow: 0px 6px 6px 10px rgba(0, 0, 0, 0.7);
-  font-size: 15px;
+  padding: 10px 50px 0px 15px;
+  background-color: hsla(242, 84%, 32%, 0.816);
+  box-shadow: 0px 3px 3px 5px rgba(0, 0, 0, 0.7);
+  font-size: .8vw;
 }
 
+
 .buttonForm{
-  margin-top: 5%;
   margin-right: 25%;
   padding: 10px 20px;
   line-height: 0.5px;
-  background-color: rgb(153, 47, 239)
+  background-color: rgb(153, 47, 239);
+  border: 1px solid white;
+  position: relative;
+  left: 9%;
 }
 
 .font{
   color: rgb(255, 48, 220);
   position: relative;
-  right: 45%;
+  right: 42%;
   transform: translate(50%);
+  margin: 0;
 }

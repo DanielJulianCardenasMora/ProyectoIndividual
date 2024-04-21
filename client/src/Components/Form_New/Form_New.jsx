@@ -69,12 +69,14 @@ const Form_New = () => {
 
   return (
     <div className={style.background}>
+      <div className={style.back}></div>
+      <div className={style.back2}></div>
     <img className={style.bg2} src={'../../../src/z_imagesFonts/Images/robot.png'} alt={"fondo"} />
     <div className={style.cont}>
       <div className={style.action}>
         <form className={style.formCont} onSubmit={handleSubmit}>
           <label htmlFor="name">
-            Nombre:
+     Name
             <input
               className={style.inp}
               type="text"
@@ -90,7 +92,7 @@ const Form_New = () => {
 
 
           <label htmlFor="released">
-            Fecha de lanzamiento:
+         Released:
             <input
               className={style.inp}
               type="text"
@@ -122,7 +124,7 @@ const Form_New = () => {
 
 
           <label htmlFor="platforms">
-            Plataformas:
+            Platforms:
             <input
               className={style.inp}
               type="text"
@@ -137,7 +139,7 @@ const Form_New = () => {
 
 
           <label  className={style.genero} htmlFor="Generos">
-            Genero:{''}
+            Genre:{''}
             <select className={style.select} defaultValue='All' onChange={handleFilter}>
               <option disabled='disabled' value='All'>- Filtrar Genero -</option>
                 {genres ? genres.map((option) => {
@@ -148,11 +150,11 @@ const Form_New = () => {
                 :null}
             </select>
           </label>
-          <h3 className={style.seleccionados}>Seleccionados: {gameGenreShow.join(", ") }</h3>
+          <h3 className={style.seleccionados}>Selected: {gameGenreShow.join(", ") }</h3>
 
 
           <label htmlFor="background_image">
-            Link imagen:
+            Image link:
             <input
               className={style.inp}
               type="text"
@@ -184,8 +186,8 @@ const Form_New = () => {
 
 
 
-          <button className={style.buttonForm}>Crear mi juego</button>
-          <h3 className={style.font}>Preciona el boton para guardar</h3>
+          <button className={style.buttonForm}>Create my game</button>
+          <h3 className={style.font}>Press the button to save</h3>
         </form>
       </div>
 
