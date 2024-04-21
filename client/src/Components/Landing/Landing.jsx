@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import style from './Landing.module.css'
 import { Link } from "react-router-dom";
 import girldragon from '../../z_imagesFonts/Images/Gilranddragon.png'
+import warior from '../../../src/z_imagesFonts/Images/Wariioire.png'
+import homeimg from '../../../src/z_imagesFonts/Images/HD-wallpaper1.png'
 
 
 
@@ -14,7 +16,7 @@ const Landing = () => {
       image.src = imageUrl;
     }
 
-    preLoadImage('../../../src/z_imagesFonts/Images/HD-wallpaper1.png');
+    preLoadImage(homeimg);
   }, []);
 
   return (
@@ -30,8 +32,8 @@ const Landing = () => {
         
       <div className={style.leftImages}>
         <img className={style.dragon} src={girldragon} />
-        <img className={style.warrior} src={'../../../src/z_imagesFonts/Images/Wariioire.png'} />
-        <img src={'../../../src/z_imagesFonts/Images/HD-wallpaper1.png'} alt="Home Background" preload="auto" style={{ display: "none" }} />
+        <img className={style.warrior} src={warior} />
+        <img src={homeimg} alt="Home Background" preload="auto" style={{ display: "none" }} />
       </div>
     </>
   )
