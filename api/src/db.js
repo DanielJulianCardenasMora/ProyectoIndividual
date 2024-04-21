@@ -8,7 +8,6 @@ const genreModel = require("./models/Genre");
 //   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
 //   { logging: false, native: false }
 // );
-
 const sequelize = new Sequelize(
   DATABASE_URL,
   { logging: false, native: false }
