@@ -6,6 +6,7 @@ import { About_View, Detail_View, Form_New_View, Home_View, Landing_View, Wellco
 import { getApiGames, getDataBaseGenres, getDBGames } from './Redux/actions';
 import Nav_Bar from './Components/Wellcome/Nav_Bar/Nav_Bar';
 
+axios.defaults.baseURL=proyectoindividual.up.railway.app
 
 function App() {
   const { pathname } = useLocation()
