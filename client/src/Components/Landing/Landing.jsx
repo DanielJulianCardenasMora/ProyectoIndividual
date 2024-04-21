@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import style from './Landing.module.css'
 import { Link } from "react-router-dom";
-
+import girldragon from '../../z_imagesFonts/Images/Gilranddragon.png'
 
 
 
@@ -29,7 +29,7 @@ const Landing = () => {
       </div>
         
       <div className={style.leftImages}>
-        <img className={style.dragon} src={'../../../src/z_imagesFonts/Images/Gilr and dragon.png'} />
+        <img className={style.dragon} src={girldragon} />
         <img className={style.warrior} src={'../../../src/z_imagesFonts/Images/Wariioire.png'} />
         <img src={'../../../src/z_imagesFonts/Images/HD-wallpaper1.png'} alt="Home Background" preload="auto" style={{ display: "none" }} />
       </div>
