@@ -25,8 +25,7 @@ const Landing = () => {
         </Link>
       </div>
 
-      <div>
-        <img className={style.bg} src={'../../../src/z_imagesFonts/Images/—Pngtree—3d renderings of contemporary and_5813645.jpg'} />
+      <div className={style.bg} >
       </div>
         
       <div className={style.leftImages}>

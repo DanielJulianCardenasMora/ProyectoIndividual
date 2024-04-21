@@ -5,6 +5,8 @@
   position: absolute;
   right: 0;
   top: 0;
+  background-image: url('../../../src/z_imagesFonts/Images/controller.jpg');
+  background-size: cover;
 }
 
 .leftImages{
