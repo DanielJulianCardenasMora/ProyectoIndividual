@@ -1,5 +1,5 @@
 import style from './Wellcome.module.css'
-
+import homeimg from '../../../src/z_imagesFonts/Images/HD-wallpaper1.png'
 
 
 
@@ -19,7 +19,7 @@ const Wellcome = () => {
         </div>
         
         <div className={style.bg}>
-          <img className={style.imagen2} src={'../../../src/z_imagesFonts/Images/HD-wallpaper1.png'} />
+          <img className={style.imagen2} src={homeimg} />
           <img className={style.imagen} src={'../../../src/z_imagesFonts/Images/Landing Girl.png'} />
         </div>
 
