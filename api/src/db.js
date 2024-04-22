@@ -25,22 +25,22 @@ const sequelize = new Sequelize(
 //   },
 // });
 
-// gameModel(sequelize);
-// genreModel(sequelize);
+gameModel(sequelize);
+genreModel(sequelize);
 
 const { Game, Genre } = sequelize.models;
 
 
-// Game.belongsToMany(Genre, {
-//   through: 'Game_Genre',
-//   foreignKey: 'gameID',
-//   timestamps: false
-// })
-// Genre.belongsToMany(Game, {
-//   through: 'Game_Genre',
-//   foreignKey: 'genreID',
-//   timestamps: false
-// })
+Game.belongsToMany(Genre, {
+  through: 'Game_Genre',
+  foreignKey: 'gameID',
+  timestamps: false
+})
+Genre.belongsToMany(Game, {
+  through: 'Game_Genre',
+  foreignKey: 'genreID',
+  timestamps: false
+})
 
 module.exports = {
   Game,
