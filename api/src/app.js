@@ -25,7 +25,7 @@ server.use(morgan("dev"));
 // });
 server.use(
    cors({
-     origin: ['https://videogamesworld.vercel.app/', "http://localhost:5173"],
+     origin: ['https://videogamesworld.vercel.app', "http://localhost:5173"],
      credentials: true,
      methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
      allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
