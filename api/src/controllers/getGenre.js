@@ -4,12 +4,13 @@ const { URL, API_KEY } = process.env
 const { Genre } = require('../db')
 // const URL = 'https://api.rawg.io/api/'
 // const API_KEY = "?key=60168d0ccdc54d229cb076e54698a8fa"
-
-    
+const { get } = require('@railway/cli/lib/env');
+const apiUrl = await get('URL');
 
 
 
 const getGenre = async (req, res) => {
+  console.log(`API URL: ${apiUrl}`);
   try {
     let genres = [];
       const { data } = await axios.get(`${URL}genres${API_KEY}`);
