@@ -91,6 +91,8 @@
   margin: 12px auto;
   text-align: right;
   margin: 0;
+  display: block;
+  width: 100%;
 }
 .formCont::placeholder{
   font-size: 16px;

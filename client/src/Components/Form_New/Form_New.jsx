@@ -1,7 +1,7 @@
 import style from "./Form_New.module.css";
 import { useEffect, useState } from "react";
 import validacion from './validacion'
-const URL_SERVER = 'http://localhost:3001/mundoVideoJuegos/'
+const URL_SERVER = 'https://proyectoindividual.up.railway.app/'
 import axios from 'axios'
 import { useSelector } from "react-redux";
 
@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 
 
-const Form_New = () => {
+const Form_New = ({robot}) => {
   const genres = useSelector((state) => state.gamesGenreDataBase)
   const [gameData, setGameData] = useState({
     name: '',
@@ -71,7 +71,7 @@ const Form_New = () => {
     <div className={style.background}>
       <div className={style.back}></div>
       <div className={style.back2}></div>
-    <img className={style.bg2} src={'../../../src/z_imagesFonts/Images/robot.png'} alt={"fondo"} />
+    <img className={style.bg2} src={robot} alt={"fondo"} />
     <div className={style.cont}>
       <div className={style.action}>
         <form className={style.formCont} onSubmit={handleSubmit}>

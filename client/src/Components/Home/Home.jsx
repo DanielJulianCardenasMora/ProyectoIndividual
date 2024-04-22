@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Home = () => {
+const Home = ({back}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const getDB = () => {
@@ -24,12 +24,8 @@ const Home = () => {
     <>
       <div className={style.container}>
         <div className={style.section2}>
-          <div className={style.circleTwo}>
-          <div className={style.bg}>
-            <img className={style.imagen} />
-          </div>
+          <img className={style.imagen} src={back} />
         </div>
-      </div>
       </div>
     </>
   )

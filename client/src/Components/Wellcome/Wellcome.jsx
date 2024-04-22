@@ -19,7 +19,6 @@ const Wellcome = ({homeimg2, homeimg, girLanding, girl1, girl2}) => {
           <img className={style.imagen3} src={homeimg2} />
       </div>
 
-
       <div className={style.section3}>
         <div className={style.bg_gamers}>
           <img className={style.gamer1} src={girl1} />

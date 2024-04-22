@@ -13,11 +13,11 @@ import Home from "../../Components/Home/Home"
 
 
 
-const Home_View = () => {
+const Home_View = ({back}) => {
   return (
     <>
       <div>
-        <Home />
+        <Home back={back} />
         <Cards_Display/>
         <Filter_Db/>
         <Filter_Genre/>

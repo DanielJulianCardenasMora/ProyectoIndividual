@@ -2,6 +2,7 @@
   height: 100vh;
   width: 100%;
   position:fixed;
+  background-color: rgb(108, 162, 243);
 }
 
 .background{
@@ -20,14 +21,15 @@
   height: 100vh;
 }
 
-.circleTwo{
+.imagen{
   /* background: radial-gradient(ellipse at 61% -10%, rgba(0, 224, 255, 1) 5%, rgb(10, 0, 151) 31%,rgb(164, 1, 193) 82%, rgb(233, 25, 188) 90%);
   display: absolute;
   top: 0; */
-  background-image: url("../../z_imagesFonts/Images/back.jpg");
-  background-size: cover;
+  /* background-image: url("../../z_imagesFonts/Images/back.jpg"); */
+  /* background-size: cover; */
   height: 100vh;
   width: 100%;
+  opacity: 90%;
 }
 
 .botonPresentacion{

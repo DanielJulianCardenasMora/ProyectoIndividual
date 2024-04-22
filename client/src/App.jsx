@@ -11,6 +11,8 @@ import homeimg2 from './z_imagesFonts/Images/HD-wallpaper2.png'
 import girLanding from './z_imagesFonts/Images/Landing Girl.png'
 import girl1 from './z_imagesFonts/Images/g1.png'
 import girl2 from './z_imagesFonts/Images/g3.png'
+import back from './z_imagesFonts/Images/back.jpg' 
+import robot from './z_imagesFonts/Images/robot.png' 
 axios.defaults.baseURL='proyectoindividual.up.railway.app'
 
 function App() {
@@ -36,6 +38,7 @@ function App() {
     preLoadImage(girLanding);
     preLoadImage(girl1);
     preLoadImage(girl2);
+    preLoadImage(back);
   }, []);
 
   useEffect(() => {
@@ -51,11 +54,11 @@ function App() {
       <Routes> 
         <Route path='/' element={<Landing_View />} />
         <Route path='/wellcome' element={<Wellcome_View homeimg={homeimg} homeimg2={homeimg2} girLanding={girLanding} girl1={girl1} girl2={girl2} />}/>
-        <Route path='/home' element={<Home_View />} />
+        <Route path='/home' element={<Home_View back={back} />} />
         <Route path='/detail/:id' element={<Detail_View />} />
         <Route path='/detailAPI/:id' element={<Detail_View />} />
         <Route path='/about' element={<About_View/>} />
-        <Route path='/createGame' element={<Form_New_View/>}/>
+        <Route path='/createGame' element={<Form_New_View robot={robot} />}/>
       </Routes>
     </div>
   )
