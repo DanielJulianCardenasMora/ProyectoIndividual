@@ -15,6 +15,7 @@ import back from './z_imagesFonts/Images/back.jpg'
 import robot from './z_imagesFonts/Images/robot.png' 
 axios.defaults.baseURL='proyectoindividual.up.railway.app'
 
+
 function App() {
   const { pathname } = useLocation()
   const dispatch = useDispatch()
