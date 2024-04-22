@@ -6,6 +6,8 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { About_View, Detail_View, Form_New_View, Home_View, Landing_View, Wellcome_View } from './Views';
 import { getApiGames, getDataBaseGenres, getDBGames } from './Redux/actions';
 import Nav_Bar from './Components/Wellcome/Nav_Bar/Nav_Bar';
+import homeimg from './z_imagesFonts/Images/HD-wallpaper1.png'
+import homeimg2 from './z_imagesFonts/Images/HD-wallpaper2.png'
 
 axios.defaults.baseURL='proyectoindividual.up.railway.app'
 
@@ -22,6 +24,15 @@ function App() {
     dispatch(getDBGames())
   } 
   
+  useEffect(() => {
+    function preLoadImage(imageUrl) {
+      const image = new Image();
+      image.src = imageUrl;
+    }
+
+    preLoadImage(homeimg);
+    preLoadImage(homeimg2);
+  }, []);
 
   useEffect(() => {
     getGames()
@@ -35,7 +46,7 @@ function App() {
       {pathname != '/' && <Nav_Bar />}
       <Routes> 
         <Route path='/' element={<Landing_View />} />
-        <Route path='/wellcome' element={<Wellcome_View/>}/>
+        <Route path='/wellcome' element={<Wellcome_View homeimg={homeimg} homeimg2={homeimg2} />}/>
         <Route path='/home' element={<Home_View />} />
         <Route path='/detail/:id' element={<Detail_View />} />
         <Route path='/detailAPI/:id' element={<Detail_View />} />

@@ -1,5 +1,6 @@
 import style from './Wellcome.module.css'
-import homeimg from '../../../src/z_imagesFonts/Images/HD-wallpaper1.png'
+// import homeimg from '../../../src/z_imagesFonts/Images/HD-wallpaper1.png'
+import homeimg3 from '../../../src/z_imagesFonts/Images/HD-wallpaper2.png'
 
 
 
@@ -8,7 +9,7 @@ import homeimg from '../../../src/z_imagesFonts/Images/HD-wallpaper1.png'
 
 
 
-const Wellcome = () => {
+const Wellcome = ({homeimg2, homeimg}) => {
   return (
     <>
       <div className={style.section1}>
@@ -23,7 +24,7 @@ const Wellcome = () => {
           <img className={style.imagen} src={'../../../src/z_imagesFonts/Images/Landing Girl.png'} />
         </div>
 
-          <img className={style.imagen3} src={'../../../src/z_imagesFonts/Images/HD-wallpaper2.png'} />
+          <img className={style.imagen3} src={homeimg3} />
       </div>
 
 

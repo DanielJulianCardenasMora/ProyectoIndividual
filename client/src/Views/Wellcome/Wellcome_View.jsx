@@ -2,10 +2,10 @@ import Wellcome from "../../Components/Wellcome/Wellcome";
 
 
 
-const Wellcome_View = () => {
+const Wellcome_View = ({homeimg2, homeimg}) => {
   return (
     <>
-      <Wellcome/>
+      <Wellcome homeimg={homeimg} homeimg2={homeimg2}/>
     </>
   )
 }
