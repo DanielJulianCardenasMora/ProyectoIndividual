@@ -10,7 +10,7 @@ const server = express();
 
 server.use(morgan("dev"));
 server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:5173', 'https://proyectoindividual.up.railway.app');
+  res.header('Access-Control-Allow-Origin', 'https://localhost:5173', 'https://proyecto-individual-gilt.vercel.app');
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header(
      'Access-Control-Allow-Headers',
@@ -22,6 +22,7 @@ server.use((req, res, next) => {
   );
   next();
 });
+
 server.use(express.json())
 server.use('/mundoVideoJuegos', router)
 
