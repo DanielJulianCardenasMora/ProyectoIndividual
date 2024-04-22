@@ -19,7 +19,7 @@ module.exports = {
     DB_PORT,
     DB_USER,
     DB_HOST,
-    HOST,
+    // HOST,
     // EMAILER_HOST,
     // EMAILER_PORT,
     // EMAILER_USER,
