@@ -13,22 +13,34 @@ const sequelize = new Sequelize(
   { logging: false, native: false }
 );
 
-gameModel(sequelize);
-genreModel(sequelize);
+// let sequelize = new Sequelize({
+//   database: DB_NAME,
+//   username: DB_USER,
+//   password: DB_PASSWORD,
+//   host: DB_HOST,
+//   port: DB_PORT,
+//   dialect: "postgres",
+//   dialectOptions: {
+//     ssl: false,
+//   },
+// });
+
+// gameModel(sequelize);
+// genreModel(sequelize);
 
 const { Game, Genre } = sequelize.models;
 
 
-Game.belongsToMany(Genre, {
-  through: 'Game_Genre',
-  foreignKey: 'gameID',
-  timestamps: false
-})
-Genre.belongsToMany(Game, {
-  through: 'Game_Genre',
-  foreignKey: 'genreID',
-  timestamps: false
-})
+// Game.belongsToMany(Genre, {
+//   through: 'Game_Genre',
+//   foreignKey: 'gameID',
+//   timestamps: false
+// })
+// Genre.belongsToMany(Game, {
+//   through: 'Game_Genre',
+//   foreignKey: 'genreID',
+//   timestamps: false
+// })
 
 module.exports = {
   Game,

@@ -1,5 +1,5 @@
 const axios = require("axios");
-require('dotenv').config()
+// require('dotenv').config()
 // const { URL, API_KEY } = process.env
 const { Genre } = require('../db')
 const URL = 'https://api.rawg.io/api/'
