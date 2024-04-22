@@ -2,6 +2,7 @@ import style from "./Form_New.module.css";
 import { useEffect, useState } from "react";
 import validacion from './validacion'
 const URL_SERVER = 'https://proyectoindividual.up.railway.app/'
+// const URL_SERVER = 'http://localhost:3001/'
 import axios from 'axios'
 import { useSelector } from "react-redux";
 
@@ -57,7 +58,7 @@ const Form_New = ({robot}) => {
       alert(data)
     }
     catch (error) {
-      alert(error.response.data.message)
+      console.log(error)
     }
   }
   const handleSubmit = (evento) => {

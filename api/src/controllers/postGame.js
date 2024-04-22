@@ -34,7 +34,8 @@ const postGame = async (req, res) => {
     
     res.status(200).json('Agregaste el juego con exito!!!!!, dirigete a "Find" para ver tus juegos creados');
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.log(error)
+    res.status(500).json({ message: error });
   }
 };
 
