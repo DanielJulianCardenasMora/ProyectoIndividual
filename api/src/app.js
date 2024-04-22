@@ -25,7 +25,7 @@ server.use(morgan("dev"));
 // });
 server.use(
    cors({
-     origin: ["http://localhost:5173", "https://proyecto-individual-i9tee3m9h.vercel.app"],
+     origin: ["http://localhost:5173", "https://proyecto-individual-gilt.vercel.app/"],
      credentials: true,
      methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
      allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
