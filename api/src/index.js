@@ -8,7 +8,7 @@ sequelize
   .sync({ Force: true })
   .then(() => {
     server.listen(PORT || `http://localhost:3001` , () => {
-      console.log("Server listening on port:", DB_PORT);
+      console.log("Server listening on port:", PORT);
     });
   })
   .catch((err) => console.log(err));
