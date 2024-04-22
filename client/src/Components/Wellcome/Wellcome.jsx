@@ -1,15 +1,7 @@
 import style from './Wellcome.module.css'
-// import homeimg from '../../../src/z_imagesFonts/Images/HD-wallpaper1.png'
-import homeimg3 from '../../../src/z_imagesFonts/Images/HD-wallpaper2.png'
 
 
-
-
-
-
-
-
-const Wellcome = ({homeimg2, homeimg}) => {
+const Wellcome = ({homeimg2, homeimg, girLanding, girl1, girl2}) => {
   return (
     <>
       <div className={style.section1}>
@@ -21,17 +13,17 @@ const Wellcome = ({homeimg2, homeimg}) => {
         
         <div className={style.bg}>
           <img className={style.imagen2} src={homeimg} />
-          <img className={style.imagen} src={'../../../src/z_imagesFonts/Images/Landing Girl.png'} />
+          <img className={style.imagen} src={girLanding} />
         </div>
 
-          <img className={style.imagen3} src={homeimg3} />
+          <img className={style.imagen3} src={homeimg2} />
       </div>
 
 
       <div className={style.section3}>
         <div className={style.bg_gamers}>
-          <img className={style.gamer1} src={'../../../src/z_imagesFonts/Images/desktop-wallpaper-anime-art-girl-by-valkryie-ymir-on-cool-art-retro-wave-anime-girl 1.png'} />
-          <img className={style.gamer3} src={'../../../src/z_imagesFonts/Images/uwp4265035 1.png'} />
+          <img className={style.gamer1} src={girl1} />
+          <img className={style.gamer3} src={girl2} />
         </div>
 
         <div className={style.section_text}>

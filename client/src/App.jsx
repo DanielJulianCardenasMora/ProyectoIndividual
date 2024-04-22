@@ -8,7 +8,9 @@ import { getApiGames, getDataBaseGenres, getDBGames } from './Redux/actions';
 import Nav_Bar from './Components/Wellcome/Nav_Bar/Nav_Bar';
 import homeimg from './z_imagesFonts/Images/HD-wallpaper1.png'
 import homeimg2 from './z_imagesFonts/Images/HD-wallpaper2.png'
-
+import girLanding from './z_imagesFonts/Images/Landing Girl.png'
+import girl1 from './z_imagesFonts/Images/g1.png'
+import girl2 from './z_imagesFonts/Images/g3.png'
 axios.defaults.baseURL='proyectoindividual.up.railway.app'
 
 function App() {
@@ -23,15 +25,17 @@ function App() {
   const getDB = () => {
     dispatch(getDBGames())
   } 
-  
+
   useEffect(() => {
     function preLoadImage(imageUrl) {
       const image = new Image();
       image.src = imageUrl;
     }
-
     preLoadImage(homeimg);
     preLoadImage(homeimg2);
+    preLoadImage(girLanding);
+    preLoadImage(girl1);
+    preLoadImage(girl2);
   }, []);
 
   useEffect(() => {
@@ -46,7 +50,7 @@ function App() {
       {pathname != '/' && <Nav_Bar />}
       <Routes> 
         <Route path='/' element={<Landing_View />} />
-        <Route path='/wellcome' element={<Wellcome_View homeimg={homeimg} homeimg2={homeimg2} />}/>
+        <Route path='/wellcome' element={<Wellcome_View homeimg={homeimg} homeimg2={homeimg2} girLanding={girLanding} girl1={girl1} girl2={girl2} />}/>
         <Route path='/home' element={<Home_View />} />
         <Route path='/detail/:id' element={<Detail_View />} />
         <Route path='/detailAPI/:id' element={<Detail_View />} />
