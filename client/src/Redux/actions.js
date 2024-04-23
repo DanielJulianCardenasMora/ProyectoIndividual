@@ -1,7 +1,7 @@
 import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB } from './action-types'
 import axios from 'axios'
-const URL_SERVER = 'https://proyectoindividual.up.railway.app/mundovideojuegos/'
-// const URL_SERVER = 'http://localhost:3001/mundovideojuegos/'
+// const URL_SERVER = 'https://proyectoindividual.up.railway.app/mundovideojuegos/'
+const URL_SERVER = 'http://localhost:3001/mundovideojuegos/'
 
 
 
@@ -23,10 +23,11 @@ export const getApiGames = () => {
 };
 
 export const getDataBaseGenres = () => {
+
   return async (dispatch) => {
     try {
       const { data } = await axios
-        .get(`${URL_SERVER}allGenres`);
+        .get(`${URL_SERVER}genres`);
 
       return dispatch({
         type: GET_GENRE,

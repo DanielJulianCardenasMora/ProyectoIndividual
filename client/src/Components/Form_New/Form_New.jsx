@@ -1,8 +1,8 @@
 import style from "./Form_New.module.css";
 import { useEffect, useState } from "react";
 import validacion from './validacion'
-const URL_SERVER = 'https://proyectoindividual.up.railway.app/'
-// const URL_SERVER = 'http://localhost:3001/'
+// const URL_SERVER = 'https://proyectoindividual.up.railway.app/'
+const URL_SERVER = 'http://localhost:3001/mundoVideoJuegos/'
 import axios from 'axios'
 import { useSelector } from "react-redux";
 
@@ -51,10 +51,13 @@ const Form_New = ({robot}) => {
 
 
   const createGame = async (gameData) => {
+    console.log(gameData)
     try {
-      const { name, description, background_image, platforms, released, rating, Generos } = gameData;
+      const game = gameData
+      // const { name, description, background_image, platforms, released, rating, Generos } = gameData;
       const { data } = await axios
-        .post(`${URL_SERVER}videogames/?name=${name}&description=${description}&background_image=${background_image}&platforms=${platforms}&released=${released}&rating=${rating}&Generos=${Generos}`);
+        // .post(`${URL_SERVER}videogames/?name=${name}&description=${description}&background_image=${background_image}&platforms=${platforms}&released=${released}&rating=${rating}&Generos=${Generos}`);
+        .post(`${URL_SERVER}videogames`, game);
       alert(data)
     }
     catch (error) {

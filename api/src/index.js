@@ -5,7 +5,7 @@ const { PORT } = process.env || 3001;
 // const { PORT } = require('../config')
 
 sequelize
-  .sync({ Force: true })
+  .sync({ force: false })
   .then(() => {
     server.listen(PORT || `http://localhost:3001` , () => {
       console.log("Server listening on port:", PORT);

@@ -17,7 +17,7 @@ module.exports = (sequelize) => {
       },
       description: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       background_image: {
         type: DataTypes.STRING,
@@ -25,15 +25,15 @@ module.exports = (sequelize) => {
       },
       released: {
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
       },
       rating: {
         type: DataTypes.DECIMAL(10, 2),
-        allowNull: false,
+        allowNull: true,
       },
       platforms: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
       },
     },
     {
