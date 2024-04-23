@@ -11,7 +11,7 @@ const modelModel = require("./models/Model");
 //   { logging: false, native: false }
 // );
 const sequelize = new Sequelize(
-  "postgres://postgres:my_secret_password@viaduct.proxy.rlwy.net:55531/railway_app",
+  "postgres://postgres:AdflEQYoCYiZuUADbtQTFEJMtZLHvdAD@viaduct.proxy.rlwy.net:55531/railway_app",
   { logging: false, native: false }
 );
 
