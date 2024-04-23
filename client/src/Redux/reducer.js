@@ -49,7 +49,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         gamesApi: [...state.gamesApi],
         gamesApiToShow: action.payload === 'All' ? state.gamesApi : juegosPorGenero,
-        message: !juegosPorGenero[1]?'En nuestros 100 juegos de muestra, no tenemos juegos con ese genero':''
+        message: !juegosPorGenero[0]?'In our 100 show games, there is no that genre':''
       }
 
     
@@ -90,7 +90,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         gamesApi: [...state.gamesApi],
         gamesApiToShow: miRating,
-        message: !miRating[1]?'En nuestros 100 juegos de muestra, no tenemos juegos con ese rating':''
+        message: !miRating[0]?'In our 100 show games, there is no that rating':''
       }
     
     

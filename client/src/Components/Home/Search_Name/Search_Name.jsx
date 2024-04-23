@@ -37,13 +37,13 @@ const Search_Name = () => {
               name='nombre'
               value={nombre}
               onChange={handleInputChange}
-              placeholder='Palabra clave de nombre'
+              placeholder='Key word of the name'
               />
-            <button type='submit'>Buscar</button>
+            <button type='submit'>Search</button>
           </form>
         </div>
 
-      <button className={style.vertodos} onClick={handleSubmitAll} type='submit'>Ver todos</button>
+      <button className={style.vertodos} onClick={handleSubmitAll} type='submit'>See all</button>
     </div>
   )
 }

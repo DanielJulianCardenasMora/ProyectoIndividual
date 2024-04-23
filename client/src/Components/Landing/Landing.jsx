@@ -9,7 +9,7 @@ const Landing = () => {
     <>
       <div>
         <Link to={'/wellcome'}>
-          <button className={style.ingresar}>Ingresar</button>
+          <button className={style.ingresar}>Enter</button>
         </Link>
       </div>
 

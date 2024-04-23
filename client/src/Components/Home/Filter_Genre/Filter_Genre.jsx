@@ -21,7 +21,7 @@ const Filter_Genre = () => {
   return (
     <div className={style.container}>
       <select className={style.select} defaultValue='All' onChange={handleFilter}>
-        <option disabled='disabled' value='All'>--- Filtrar Genero ---</option>
+        <option disabled='disabled' value='All'>--- Filter Genre ---</option>
           {genres ? genres.map((option) => {
             return (
               <option key={option.id} value={option.name}>{option.Nombre}</option>

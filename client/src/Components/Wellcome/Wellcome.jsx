@@ -6,9 +6,9 @@ const Wellcome = ({homeimg2, homeimg, girLanding, girl1, girl2}) => {
     <>
       <div className={style.section1}>
         <div className={style.world}>
-          <h1>Mundo</h1>  
-          <h1>de los</h1>  
-          <h1>Video Juegos</h1>  
+          <h1>VIDEO</h1>  
+          <h1>GAMES</h1>  
+          <h1>WORLD</h1>  
         </div>
         
         <div className={style.bg}>
@@ -26,13 +26,13 @@ const Wellcome = ({homeimg2, homeimg, girLanding, girl1, girl2}) => {
         </div>
 
         <div className={style.section_text}>
-          <h1>Como optener el maximo poder de esta pagina?</h1>
-          <h2>En "Find" entraras en un almacen de 800.000 VideoJuegos</h2>
-          <h3>Veras una demostracion de 15 Video Juegos hasta un total de 100</h3>
-          <h2>Filtra por rating</h2>
-          <h3>Ordena de mayor a menor su rating</h3>
-          <h2>Busca todos</h2>
-          <h3>En la casilla ingresa una palabra del nombre del Video Juego</h3>
+          <h1>How to get the maximum power in this page?</h1>
+          <h2>In "Find" you will see a store of 800.000 VideoGames</h2>
+          <h3>There will be on screen 15 Video Games until a total of 100</h3>
+          <h2>Filter by rating</h2>
+          <h3>Order higher to lower rating</h3>
+          <h2>Find within 800.000</h2>
+          <h3>In the box enter a word of the Video Game name</h3>
         </div>
       </div>
     </>

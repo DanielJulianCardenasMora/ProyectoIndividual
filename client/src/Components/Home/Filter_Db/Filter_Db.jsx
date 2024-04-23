@@ -24,7 +24,7 @@ const Filter_Db = () => {
   return (
     <div className={ style.container }>
       <button className={ style.buttonDB } onClick={handleChange}>
-          Creados
+          Created
         </button>
     </div>
   )

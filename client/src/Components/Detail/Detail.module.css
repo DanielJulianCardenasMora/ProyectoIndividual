@@ -84,8 +84,8 @@
 }
 .button{
   position: fixed;
-  top: 30%;
-  right: 8.3%;
+  bottom: 8%;
+  right: 6.3%;
   border: 2px solid white;
 }
 

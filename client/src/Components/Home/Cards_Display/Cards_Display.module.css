@@ -52,5 +52,13 @@
 }
 .cardsContainer2{
   position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.708);
+  padding: 0.5% 2%;
+  border-radius: 1vw;
+  border: 1px solid white;
+  top: 30%;
+  right: 50%;
+  transform: translate(50%);
 }
 

@@ -104,6 +104,8 @@
   margin-top: .5%;
   margin-bottom: 1%;
   line-height: 0;
+  width: 100%;
+  text-align: right;
 }
 
 .formCont{

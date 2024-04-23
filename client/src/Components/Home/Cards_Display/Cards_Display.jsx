@@ -70,17 +70,17 @@ const Cards_Display = () => {
               genres={game.genres}
               rating={game.rating}
           />))}
-        <div className={style.cardsContainer2}>{alerta}</div>
+
       </div>
       
       <div className={style.buttonsContainer}>
         <button className={style.buttons1} onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
-          Anterior
+          Previous
         </button>
         <button className={style.buttons2}
           onClick={() => setCurrentPage(currentPage + 1)}
           disabled={currentPage === Math.ceil(orderGames.length / itemsPerPage)}>
-          Siguiente
+          Next
         </button>
         <button className={style.buttons3} onClick={handleOrder}>
           Asc 
@@ -89,6 +89,13 @@ const Cards_Display = () => {
           Des 
         </button>
       </div>
+      <div>
+      {alerta.length > 0 ? (
+        <div className={style.cardsContainer2}>{alerta}</div>
+      ) : (
+    ""
+      )}
+    </div>
     </div>
   );
 };

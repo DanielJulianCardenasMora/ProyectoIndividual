@@ -145,7 +145,7 @@ const Form_New = ({robot}) => {
           <label  className={style.genero} htmlFor="Generos">
             Genre:{''}
             <select className={style.select} defaultValue='All' onChange={handleFilter}>
-              <option disabled='disabled' value='All'>- Filtrar Genero -</option>
+              <option disabled='disabled' value='All'>- Filter Genre -</option>
                 {genres ? genres.map((option) => {
                   return (
                     <option key={option.id} data-nombre={option.Nombre} value={option.id}>{option.Nombre}</option>
