@@ -1,13 +1,13 @@
 const server = require("./app");
 const { sequelize } = require("./db");
 require("dotenv").config();
-// const { PORT } = process.env || 3001;
-const { PORT } = require('../config')
+const { PORT } = process.env || 3001;
+// const { PORT } = require('../config')
 
 sequelize
   .sync({ force: false })
   .then(() => {
-    server.listen(PORT || `http://localhost:3001` , () => {
+    server.listen(PORT, () => {
       console.log("Server listening on port:", PORT);
     });
   })

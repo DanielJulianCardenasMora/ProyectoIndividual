@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DATABASE_URL, DB_PORT } = require('../config');
-// const { LOCAL_DB_USER, LOCAL_DB_PASSWORD, LOCAL_DB_HOST, LOCAL_DB_NAME, DATABASE_URL, DB_PORT } = process.env
+// const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DATABASE_URL, DB_PORT } = require('../config');
+const { LOCAL_DB_USER, LOCAL_DB_PASSWORD, LOCAL_DB_HOST, LOCAL_DB_NAME, DATABASE_URL, DB_PORT } = process.env
 const gameModel = require("./models/Game");
 const genreModel = require("./models/Genre");
 const modelModel = require("./models/Model");
@@ -10,16 +10,13 @@ const modelModel = require("./models/Model");
 //   `postgres://${LOCAL_DB_USER}:${LOCAL_DB_PASSWORD}@${LOCAL_DB_HOST}/${LOCAL_DB_NAME}`,
 //   { logging: false, native: false }
 // );
+
+
+
 const sequelize = new Sequelize(
-  "postgres://postgres:AdflEQYoCYiZuUADbtQTFEJMtZLHvdAD@viaduct.proxy.rlwy.net:55531/railway_app",
+  DATABASE_URL,
   { logging: false, native: false }
 );
-
-
-// const sequelize = new Sequelize(
-//   DATABASE_URL,
-//   { logging: false, native: false }
-// );
 
 
 // let sequelize = new Sequelize({
