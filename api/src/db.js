@@ -6,15 +6,15 @@ const gameModel = require("./models/Game");
 const genreModel = require("./models/Genre");
 const modelModel = require("./models/Model");
 
-const sequelize = new Sequelize(
-  `postgres://${LOCAL_DB_USER}:${LOCAL_DB_PASSWORD}@${LOCAL_DB_HOST}/${LOCAL_DB_NAME}`,
-  { logging: false, native: false }
-);
-
 // const sequelize = new Sequelize(
-//   DATABASE_URL,
+//   `postgres://${LOCAL_DB_USER}:${LOCAL_DB_PASSWORD}@${LOCAL_DB_HOST}/${LOCAL_DB_NAME}`,
 //   { logging: false, native: false }
 // );
+
+const sequelize = new Sequelize(
+  DATABASE_URL,
+  { logging: false, native: false }
+);
 
 // let sequelize = new Sequelize({
 //   database: DB_NAME,
