@@ -1,12 +1,20 @@
 const express = require("express");
 const morgan = require("morgan");
 const router = require("./routes");
-const server = express();
 const cors = require("cors");
 
 
+const server = express();
 
-// server.use(morgan("dev"));
+server.use(
+   cors({
+     origin: ["http://localhost:5173", "https://videogamesworld.vercel.app/"],
+     credentials: true,
+     methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
+     allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
+   })
+ );
+server.use(morgan("dev"));
 // server.use((req, res, next) => {
 //   res.header('Access-Control-Allow-Origin', '*');
 //   res.header('Access-Control-Allow-Credentials', 'true');
@@ -21,18 +29,10 @@ const cors = require("cors");
 //   next();
 // });
 
-server.use(
-   cors({
-     origin: ['https://videogamesworld.vercel.app', "http://localhost:5173/"],
-     credentials: true,
-     methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
-     allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
-   })
- );
 
 server.use(express.json())
 
-server.use('/mundoVideoJuegos', router)
+server.use('/mundovideojuegos', router)
 
 
 module.exports = server;

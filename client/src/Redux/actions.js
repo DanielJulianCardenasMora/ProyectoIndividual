@@ -1,7 +1,7 @@
 import { ADD_ALL_GAMES, ORDER, FILTER_DB, FILTER_GENRE, GET_GENRE, RATINGS, GET_NAME, SHOW_ALL, SHOW_DB } from './action-types'
 import axios from 'axios'
-const URL_SERVER = 'https://proyectoindividual.up.railway.app/mundovideojuegos/'
-// const URL_SERVER = 'http://localhost:3001/mundovideojuegos/'
+// const URL_SERVER = 'https://proyectoindividual.up.railway.app/mundovideojuegos/'
+const URL_SERVER = 'http://localhost:3001/mundovideojuegos/'
 
 
 
