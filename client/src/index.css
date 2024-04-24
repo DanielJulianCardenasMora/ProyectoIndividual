@@ -1,26 +1,26 @@
 @font-face{
   font-family: videojuegos;
-  src:url(../src/z_imagesFonts/Fonts/neo_cybern\ mundo\ de\ videojuegos/NEO\ CYBERN.otf);
+  src:url(./z_imagesFonts/Fonts/neo_cybern\ mundo\ de\ videojuegos/NEO\ CYBERN.otf);
 }
 @font-face{
   font-family: 'navbar';
-  src:url(../src/z_imagesFonts/Fonts/listian\ about\ favorites\ find//Listian\ Reguler.otf) 
+  src:url(./z_imagesFonts/Fonts/listian\ about\ favorites\ find//Listian\ Reguler.otf) 
 }
 @font-face{
   font-family: 'about';
-  src:url(../src/z_imagesFonts/Fonts/anthem_minimalism\ Programming\ defines\ me/Anthem\ Minimalism\ serif.otf)
+  src:url(./z_imagesFonts/Fonts/anthem_minimalism\ Programming\ defines\ me/Anthem\ Minimalism\ serif.otf)
 }
 @font-face{
   font-family: about2;
-  src:url(../src/z_imagesFonts/Fonts/madeline_2\ Programing\ defines\ me/Madeline.otf)
+  src:url(./z_imagesFonts/Fonts/madeline_2\ Programing\ defines\ me/Madeline.otf)
 }
 @font-face{
   font-family: title;
-  src:url(../src/z_imagesFonts/Fonts/road_racer\ page\ name/Road\ Racer\ Demo.ttf)
+  src:url(./z_imagesFonts/Fonts/road_racer\ page\ name/Road\ Racer\ Demo.ttf)
 }
 @font-face{
   font-family: instrucciones;
-  src:url(../src/z_imagesFonts/Fonts/versatylo_rounded\ encontraras\ un\ boton\ de\ busqueda/VersatyloRoundedPersonalUseOnly.ttf)
+  src:url(./z_imagesFonts/Fonts/versatylo_rounded\ encontraras\ un\ boton\ de\ busqueda/VersatyloRoundedPersonalUseOnly.ttf)
 }
 
 :root {
