@@ -4,23 +4,23 @@
 }
 @font-face{
   font-family: 'navbar';
-  src:url(./z_imagesFonts/Fonts/listian\ about\ favorites\ find//Listian\ Reguler.otf) 
+  src:url(./z_imagesFonts/Fonts/listian/Listian.otf) 
 }
 @font-face{
   font-family: 'about';
-  src:url(./z_imagesFonts/Fonts/anthem_minimalism\ Programming\ defines\ me/Anthem\ Minimalism\ serif.otf)
+  src:url(./z_imagesFonts/Fonts/anthem_minimalism/Anthem.otf)
 }
 @font-face{
   font-family: about2;
-  src:url(./z_imagesFonts/Fonts/madeline_2\ Programing\ defines\ me/Madeline.otf)
+  src:url(./z_imagesFonts/Fonts/madeline_2/Madeline.otf)
 }
 @font-face{
   font-family: title;
-  src:url(./z_imagesFonts/Fonts/road_racer\ page\ name/Road\ Racer\ Demo.ttf)
+  src:url(./z_imagesFonts/Fonts/road_racer/Road.ttf)
 }
 @font-face{
   font-family: instrucciones;
-  src:url(./z_imagesFonts/Fonts/versatylo_rounded\ encontraras\ un\ boton\ de\ busqueda/VersatyloRoundedPersonalUseOnly.ttf)
+  src:url(./z_imagesFonts/Fonts/versatylo_rounded/VersatyloRoundedPersonalUseOnly.ttf)
 }
 
 :root {
