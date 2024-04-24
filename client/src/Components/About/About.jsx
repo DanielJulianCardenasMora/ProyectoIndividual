@@ -1,5 +1,5 @@
 import style from './About.module.css'
-
+import image from '../../../src/z_imagesFonts/Images/2.png'
 
 
 
@@ -10,7 +10,7 @@ import style from './About.module.css'
 const About = () => {
   return (
     <div className={style.bg}>
-      <img className={style.bgimage} src={'../../../src/z_imagesFonts/Images/2.png'} alt={'Imagen principal'} />
+      <img className={style.bgimage} src={image} alt={'Imagen principal'} />
 
       <div className={style.container}>
         <h2>Thank you so much for visiting</h2>
