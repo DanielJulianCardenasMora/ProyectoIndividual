@@ -1,7 +1,7 @@
 import style from "./Form_New.module.css";
 import { useEffect, useState } from "react";
 import validacion from './validacion'
-const URL_SERVER = 'https://proyectoindividual.up.railway.app/mundoVideoJuegos/'
+const URL_SERVER = 'https://proyectoindividual.up.railway.app/mundovideojuegos/'
 // const URL_SERVER = 'http://localhost:3001/mundoVideoJuegos/'
 import axios from 'axios'
 import { useSelector } from "react-redux";
