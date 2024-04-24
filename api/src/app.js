@@ -6,12 +6,9 @@ const cors = require("cors");
 
 
 
-
-
-
-server.use(morgan("dev"));
+// server.use(morgan("dev"));
 // server.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', 'https://videogamesworld.vercel.app/', "http://localhost:5173");
+//   res.header('Access-Control-Allow-Origin', '*');
 //   res.header('Access-Control-Allow-Credentials', 'true');
 //   res.header(
 //      'Access-Control-Allow-Headers',
@@ -23,9 +20,10 @@ server.use(morgan("dev"));
 //   );
 //   next();
 // });
+
 server.use(
    cors({
-     origin: ['https://videogamesworld.vercel.app', "http://localhost:5173"],
+     origin: ['https://videogamesworld.vercel.app', "http://localhost:5173/"],
      credentials: true,
      methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
      allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
@@ -33,6 +31,7 @@ server.use(
  );
 
 server.use(express.json())
+
 server.use('/mundoVideoJuegos', router)
 
 
