@@ -8,7 +8,7 @@ const server = express();
 
 server.use(
    cors({
-     origin: ["http://localhost:5173", "https://videogamesworld.vercel.app/"],
+     origin: ["http://localhost:5173", "https://videogamesworld.vercel.app"],
      credentials: true,
      methods: ["GET", "POST", "OPTIONS", "PUT", "DELETE"],
      allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
