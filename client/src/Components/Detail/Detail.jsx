@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import style from './Detail.module.css'
+import arrow from '../../z_imagesFonts/Images/arrow-gaming.jpg'
 
 
 
@@ -39,7 +40,7 @@ const Detail = () => {
   return (
     <div className={style.bg}>
 
-      <img className={style.bgimage} src={'../../../src/z_imagesFonts/Images/arrow-gaming.jpg'} alt={'Imagen principal'}/>
+      <img className={style.bgimage} src={arrow} alt={'Imagen principal'}/>
       <div className={style.container}>
 
       <img className={style.obj} src={game.background_image} alt={'Main Image'}/>

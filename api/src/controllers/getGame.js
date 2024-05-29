@@ -36,7 +36,7 @@ const getGame = async (req, res) => {
   }
   catch (error) {
     console.log(error)
-    res.status(500).json({ message: error });
+    res.status(500).json({ message: 'Reload the page to bring the information complete' });
   }
 };
 
