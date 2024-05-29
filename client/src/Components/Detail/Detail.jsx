@@ -13,7 +13,8 @@ import arrow from '../../z_imagesFonts/Images/arrow-gaming.jpg'
 
 const Detail = () => {
   const [game, setGame] = useState({})  
-  const URL = "http://localhost:3001/mundoVideoJuegos/videogames/"
+  // const URL = "http://localhost:3001/mundoVideoJuegos/videogames/"
+  const URL = "https://proyectoindividual.up.railway.app/mundovideojuegos/videogames/"
   const { id } = useParams()
 
   useEffect(() => {
